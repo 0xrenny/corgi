@@ -346,7 +346,10 @@ def collect_news(max_age_days, limit):
             t = t[: -len(n["source"]) - 3]
         n["title"] = t
         # Robinhood's own prediction-market listing pages show up as "news"; skip them.
-        if n["source"] == "Robinhood" and re.search(r"prediction market", t, re.I):
+        # (also its event-contract pages like "Daily Temperature Low ...") and price-prediction SEO pages.
+        if not n["official"] and n["source"] == "Robinhood":
+            continue
+        if re.search(r"price prediction|prediction market|daily temperature", t, re.I):
             continue
         key = re.sub(r"[^a-z0-9]+", " ", t.lower()).strip()[:90]
         if not key or key in seen:
