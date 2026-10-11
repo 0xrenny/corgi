@@ -41,7 +41,7 @@
    }
   }
  },
- "updated_at": "2026-10-11T11:33:49+03:00",
+ "updated_at": "2026-10-11T11:36:03+03:00",
  "wallets": [
   {
    "address": "0x305cce99734d69a5ae927695b18c350763629930",
@@ -99,8 +99,8 @@
     ]
    },
    "cursor": {
-    "last_block": null,
-    "last_ts": null
+    "last_block": 85698308,
+    "last_ts": "2026-10-11T11:35:15+03:00"
    }
   },
   {
@@ -279,8 +279,8 @@
     ]
    },
    "cursor": {
-    "last_block": null,
-    "last_ts": null
+    "last_block": 85698759,
+    "last_ts": "2026-10-11T11:36:01+03:00"
    }
   },
   {
@@ -549,6 +549,13 @@
    "cash": 100.0,
    "positions_value": 0,
    "event": "mark"
+  },
+  {
+   "ts": "2026-10-11T11:36:03+03:00",
+   "equity": 100.0,
+   "cash": 100.0,
+   "positions_value": 0,
+   "event": "mark"
   }
  ],
  "summary": {
@@ -622,6 +629,32 @@
      "errors": []
     },
     "geckoterminal": {
+     "ok": true,
+     "calls": 1,
+     "failed_calls": 0,
+     "errors": []
+    }
+   }
+  },
+  {
+   "at": "2026-10-11T11:36:03+03:00",
+   "kind": "run",
+   "new_swaps": 2,
+   "copied": 0,
+   "skipped": 0,
+   "wallets_failed": [],
+   "notes": [
+    "0x7b643a81: too fresh, left for the next run",
+    "0xd9f64ec9: too fresh, left for the next run"
+   ],
+   "sources": {
+    "blockscout": {
+     "ok": true,
+     "calls": 8,
+     "failed_calls": 0,
+     "errors": []
+    },
+    "dexscreener": {
      "ok": true,
      "calls": 1,
      "failed_calls": 0,
