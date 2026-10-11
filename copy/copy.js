@@ -32,7 +32,7 @@
     tweens[id] = to;
     if (RM || REPLAY || from === to || first && !dur) { node.textContent = fmt(to); if (!(first && !RM && !REPLAY)) return; from = 0; }
     var t0 = performance.now(), D = dur || 1100;
-    (function step(t) { var k = Math.min(1, (t - t0) / D), e = 1 - Math.pow(1 - k, 3); node.textContent = fmt(from + (to - from) * e); if (k < 1) requestAnimationFrame(step); })(t0);
+    (function step(t) { var k = Math.min(1, Math.max(0, (t - t0) / D)), e = 1 - Math.pow(1 - k, 3); node.textContent = fmt(from + (to - from) * e); if (k < 1) requestAnimationFrame(step); })(t0);
   }
 
   function lastTs() { var h = doc.balance_history; return h.length ? ms(h[h.length - 1].ts) : 0; }
@@ -57,7 +57,7 @@
   function renderLive() {
     var t = ms(doc.updated_at), age = (Date.now() - t) / 36e5, live = $('live');
     live.classList.toggle('stale', age >= 5 && age < 14); live.classList.toggle('dead', age >= 14);
-    $('liveText').textContent = (age < 5 ? 'live · ' : age < 14 ? 'napping · ' : 'offline · ') + 'updated ' + ago(t);
+    var lt = $('liveText'); lt.textContent = age < 5 ? 'live' : age < 14 ? 'napping' : 'offline'; lt.appendChild(el('span', 'live-age', ' · updated ' + ago(t)));
     live.title = 'Last update ' + fmtTime(doc.updated_at, true) + ' TRT. Corgi wakes at 09:09, 13:09, 17:09 and 21:09 TRT.';
     $('updated').textContent = 'Data updated ' + fmtTime(doc.updated_at, true) + ' TRT · next wakes 09:09 · 13:09 · 17:09 · 21:09 TRT';
   }
@@ -157,7 +157,7 @@
     if (animate && !RM) {
       head.style.opacity = 0;
       var rr = $('revealRect'), t00 = performance.now(), D = 1800;
-      (function step(t) { var k = Math.min(1, (t - t00) / D), e = 1 - Math.pow(1 - k, 3); rr.setAttribute('width', W * e); if (k < 1) requestAnimationFrame(step); else head.style.opacity = 1; })(t00);
+      (function step(t) { var k = Math.min(1, Math.max(0, (t - t00) / D)), e = 1 - Math.pow(1 - k, 3); rr.setAttribute('width', W * e); if (k < 1) requestAnimationFrame(step); else head.style.opacity = 1; })(t00);
     } else if (animate) { $('revealRect').setAttribute('width', W); }
     $('chartSvg').setAttribute('aria-label', 'Paper bankroll from ' + usd(B) + ' to ' + usd(v.equity) + ', ' + v.trades.length + ' trades, max drawdown ' + v.mdd.toFixed(1) + '%');
   }

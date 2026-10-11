@@ -55,6 +55,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 .btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; }
 .live { display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 12px; border-radius: 999px; font: 600 12px var(--mono); letter-spacing: .06em; text-transform: uppercase; background: rgba(91,227,164,.1); color: var(--mint); border: 1px solid rgba(91,227,164,.25); }
 .live i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 0 currentColor; animation: pulse 1.8s infinite; }
+.live b { font-weight: 600; white-space: nowrap; } .btn { white-space: nowrap; }
 .live.stale { color: var(--amber); background: rgba(255,159,74,.1); border-color: rgba(255,159,74,.25); }
 .live.stale i { animation-duration: 3.6s; }
 .live.dead { color: var(--muted); background: transparent; border-color: var(--line-2); }
@@ -243,6 +244,8 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
   .gauge { width: 120px; }
   .pack { grid-template-columns: 1fr; }
   .brand em { display: none; }
+  .live-age { display: none; }
+  .top-r { gap: 6px; } .btn { padding: 0 11px; }
   .honest { align-items: flex-start; flex-direction: column; gap: 8px; }
   .term .ln { grid-template-columns: auto auto 1fr; } .term .ln .tx { grid-column: 3; }
   .hud-bar { width: 90px; }

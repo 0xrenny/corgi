@@ -547,6 +547,9 @@ def run(a):
         fill_t = s["ts"] + timedelta(seconds=R["delay_seconds"])
         if fill_t > t_run - timedelta(seconds=60):
             run_info["notes"].append(f"{s['tx'][:10]}: too fresh, left for the next run")
+            cur = w["cursor"]  # rewind the cursor so the next run reads this swap again
+            if cur.get("last_block") is not None and s["block"] <= cur["last_block"]:
+                cur["last_block"] = s["block"] - 1
             continue
         tw = tracked.setdefault(w["address"], {})
         pinfo = _pool_cache.get(s["token"])
