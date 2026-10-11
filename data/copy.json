@@ -41,7 +41,7 @@
    }
   }
  },
- "updated_at": "2026-10-11T21:15:44+03:00",
+ "updated_at": "2026-10-11T21:17:48+03:00",
  "wallets": [
   {
    "address": "0x305cce99734d69a5ae927695b18c350763629930",
@@ -93,7 +93,7 @@
     "wins": 2,
     "losses": 0,
     "last_trade_at": "2026-10-11T13:06:12+03:00",
-    "open_value_usd": 0.0001,
+    "open_value_usd": 5.5312,
     "pnl_curve": [
      0.0,
      1.5864,
@@ -155,7 +155,7 @@
     "wins": 3,
     "losses": 1,
     "last_trade_at": "2026-10-11T15:38:38+03:00",
-    "open_value_usd": 0.0004,
+    "open_value_usd": 16.9753,
     "pnl_curve": [
      0.0,
      -0.0393,
@@ -279,7 +279,7 @@
     "wins": 2,
     "losses": 1,
     "last_trade_at": "2026-10-11T16:02:08+03:00",
-    "open_value_usd": 0.0001,
+    "open_value_usd": 2.2808,
     "pnl_curve": [
      0.0,
      -0.2677,
@@ -342,7 +342,7 @@
     "wins": 2,
     "losses": 1,
     "last_trade_at": "2026-10-11T15:03:10+03:00",
-    "open_value_usd": 0.0,
+    "open_value_usd": 0.0465,
     "pnl_curve": [
      0.0,
      -0.2021,
@@ -396,7 +396,7 @@
     "wins": 1,
     "losses": 0,
     "last_trade_at": "2026-10-11T16:05:20+03:00",
-    "open_value_usd": 0.0002,
+    "open_value_usd": 9.9823,
     "pnl_curve": [
      0.0,
      7.5242
@@ -518,7 +518,7 @@
     "wins": 2,
     "losses": 2,
     "last_trade_at": "2026-10-11T17:03:38+03:00",
-    "open_value_usd": 0.3451,
+    "open_value_usd": 17.04,
     "pnl_curve": [
      0.0,
      -1.0418,
@@ -528,7 +528,7 @@
     ]
    },
    "cursor": {
-    "last_block": 86035721,
+    "last_block": 86035722,
     "last_ts": "2026-10-11T21:15:35+03:00"
    }
   }
@@ -2463,6 +2463,19 @@
    "reason": "sell of a position we never copied (bought before the start or skipped)",
    "tx_hash": "0xa0a7a7e0ae927a5af2602991ba0f7403fdb923c57a9b8aaaee8f650554e69735",
    "tx_url": "https://robinhoodchain.blockscout.com/tx/0xa0a7a7e0ae927a5af2602991ba0f7403fdb923c57a9b8aaaee8f650554e69735"
+  },
+  {
+   "ts": "2026-10-11T21:15:35+03:00",
+   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
+   "label": "Basenji",
+   "side": "buy",
+   "token": {
+    "address": "0xa8efe41f8560d0648f4707bee6de3602230d3f67",
+    "symbol": null
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x4d2e5c83d516dc4e35d70e898886e44d8cdbeb2aacc0c191b6b4b2baf9afe9db",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x4d2e5c83d516dc4e35d70e898886e44d8cdbeb2aacc0c191b6b4b2baf9afe9db"
   }
  ],
  "positions": [
@@ -2481,11 +2494,11 @@
    "opened_at": "2026-10-11T14:38:27+03:00",
    "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0x429307311111b21bb65a547ed58d6870d911cff5e38226d8922b98bd05bdfabd",
    "avg_price_usd": 9.735552951812454e-07,
-   "last_price_usd": 5.20404268620271e-09,
-   "last_price_at": "2026-10-11T21:15:44+03:00",
+   "last_price_usd": 2.56985618470461e-07,
+   "last_price_at": "2026-10-11T21:17:48+03:00",
    "price_stale": false,
-   "value_usd": 0.3451,
-   "unrealized_pnl_usd": -64.2085
+   "value_usd": 17.04,
+   "unrealized_pnl_usd": -47.5136
   },
   {
    "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
@@ -2502,11 +2515,11 @@
    "opened_at": "2026-10-11T12:17:41+03:00",
    "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0xf892dee4235c373c9666cfccc0c1c5c4582ee77d3ddbc6d2c5e1210049251f62",
    "avg_price_usd": 1.550495893551476e-05,
-   "last_price_usd": 2.20661537990922e-10,
-   "last_price_at": "2026-10-11T21:15:44+03:00",
+   "last_price_usd": 9.44108854498127e-06,
+   "last_price_at": "2026-10-11T21:17:48+03:00",
    "price_stale": false,
-   "value_usd": 0.0004,
-   "unrealized_pnl_usd": -27.8778
+   "value_usd": 16.9753,
+   "unrealized_pnl_usd": -10.9029
   },
   {
    "wallet": "0xef0bb67423b1c370e2477d535dc28ba728a73c04",
@@ -2523,11 +2536,11 @@
    "opened_at": "2026-10-11T12:26:34+03:00",
    "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0x69583d51d28c82a79c22b9e10cc35fa190906b58f2ca35dcaeb3e06d982df984",
    "avg_price_usd": 1.6157062930326936e-05,
-   "last_price_usd": 2.20661537990922e-10,
-   "last_price_at": "2026-10-11T21:15:44+03:00",
+   "last_price_usd": 9.44108854498127e-06,
+   "last_price_at": "2026-10-11T21:17:48+03:00",
    "price_stale": false,
-   "value_usd": 0.0002,
-   "unrealized_pnl_usd": -17.083
+   "value_usd": 9.9823,
+   "unrealized_pnl_usd": -7.1009
   },
   {
    "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
@@ -2544,11 +2557,11 @@
    "opened_at": "2026-10-11T12:12:31+03:00",
    "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0xd40e59b786142659dd656491ee70149ce333b9e2fe8c507acbee7dfcdcd3fa1d",
    "avg_price_usd": 5.578491823101838e-06,
-   "last_price_usd": 2.20661537990922e-10,
-   "last_price_at": "2026-10-11T21:15:44+03:00",
+   "last_price_usd": 9.44108854498127e-06,
+   "last_price_at": "2026-10-11T21:17:48+03:00",
    "price_stale": false,
-   "value_usd": 0.0001,
-   "unrealized_pnl_usd": -3.2682
+   "value_usd": 5.5312,
+   "unrealized_pnl_usd": 2.2629
   },
   {
    "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
@@ -2565,11 +2578,11 @@
    "opened_at": "2026-10-11T16:02:08+03:00",
    "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0x03c22c567705d90f6b68a7fdf04aecf7dc082cd2184152310b411584990a7c10",
    "avg_price_usd": 5.27550703193863e-05,
-   "last_price_usd": 2.20661537990922e-10,
-   "last_price_at": "2026-10-11T21:15:44+03:00",
+   "last_price_usd": 9.44108854498127e-06,
+   "last_price_at": "2026-10-11T21:17:48+03:00",
    "price_stale": false,
-   "value_usd": 0.0001,
-   "unrealized_pnl_usd": -12.7444
+   "value_usd": 2.2808,
+   "unrealized_pnl_usd": -10.4637
   },
   {
    "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
@@ -2586,11 +2599,11 @@
    "opened_at": "2026-10-11T12:54:57+03:00",
    "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0xe53395d3908351ddd6f13255df343cc8fa2c1d782dd6cb15f32cb87a0031d2ce",
    "avg_price_usd": 1.2892767750639335e-05,
-   "last_price_usd": 2.20661537990922e-10,
-   "last_price_at": "2026-10-11T21:15:44+03:00",
+   "last_price_usd": 9.44108854498127e-06,
+   "last_price_at": "2026-10-11T21:17:48+03:00",
    "price_stale": false,
-   "value_usd": 0.0,
-   "unrealized_pnl_usd": -0.0634
+   "value_usd": 0.0465,
+   "unrealized_pnl_usd": -0.0169
   }
  ],
  "tracked": {
@@ -2627,7 +2640,8 @@
    "0x3646a8b3bc0f6d5b62c018cb91c5da341003aadd": 612433227.4242886,
    "0xda4904ea8fcfbcf6518ee5feb134f21074cea4e0": 837884714.8679497,
    "0xfea1bd54f280bff2e0e8567360e63e083f06be5c": 1672660719.4350448,
-   "0x6214a74f8d8a6e3f8590dc74d20612f6b71c5d8c": 243110645.97638476
+   "0x6214a74f8d8a6e3f8590dc74d20612f6b71c5d8c": 243110645.97638476,
+   "0xa8efe41f8560d0648f4707bee6de3602230d3f67": 23933241.359246623
   }
  },
  "balance_history": [
@@ -2976,28 +2990,35 @@
    "cash": 0.4911,
    "positions_value": 87.3351,
    "event": "mark"
+  },
+  {
+   "ts": "2026-10-11T21:17:48+03:00",
+   "equity": 52.3472,
+   "cash": 0.4911,
+   "positions_value": 51.8561,
+   "event": "mark"
   }
  ],
  "summary": {
-  "equity_usd": 0.837,
+  "equity_usd": 52.3472,
   "cash_usd": 0.4911,
-  "positions_value_usd": 0.3459,
-  "pnl_usd": -99.163,
-  "pnl_pct": -99.163,
+  "positions_value_usd": 51.8561,
+  "pnl_usd": -47.6528,
+  "pnl_pct": -47.653,
   "realized_pnl_usd": 26.0824,
-  "unrealized_pnl_usd": -125.2453,
+  "unrealized_pnl_usd": -73.7351,
   "trades": 38,
   "buys": 20,
   "sells": 18,
   "wins": 12,
   "losses": 6,
   "win_rate": 0.6667,
-  "max_drawdown_pct": 99.761,
+  "max_drawdown_pct": 85.059,
   "peak_equity_usd": 350.3661,
   "fees_paid_usd": 3.4847,
   "open_positions": 6,
   "win_streak": 2,
-  "skipped": 68,
+  "skipped": 69,
   "best_trade_usd": 7.5242,
   "worst_trade_usd": -1.0418
  },
@@ -3196,6 +3217,35 @@
     "geckoterminal": {
      "ok": true,
      "calls": 7,
+     "failed_calls": 0,
+     "errors": []
+    }
+   }
+  },
+  {
+   "at": "2026-10-11T21:17:48+03:00",
+   "kind": "run",
+   "new_swaps": 1,
+   "copied": 0,
+   "skipped": 1,
+   "wallets_failed": [],
+   "notes": [],
+   "sources": {
+    "blockscout": {
+     "ok": true,
+     "calls": 8,
+     "failed_calls": 0,
+     "errors": []
+    },
+    "dexscreener": {
+     "ok": true,
+     "calls": 1,
+     "failed_calls": 0,
+     "errors": []
+    },
+    "geckoterminal": {
+     "ok": true,
+     "calls": 2,
      "failed_calls": 0,
      "errors": []
     }
