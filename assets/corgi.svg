@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="corgi-t">
+  <title id="corgi-t">Corgi</title>
+  <g class="ear ear-l">
+    <path d="M52 104 C38 74 28 42 36 22 C40 12 50 12 57 18 C74 32 92 48 106 66 Z" fill="#E8893A" stroke="#B85A1B" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M58 88 C50 66 44 46 48 32 C50 27 54 27 58 30 C70 42 82 52 92 64 Z" fill="#F7C9A8"/>
+  </g>
+  <g class="ear ear-r">
+    <path d="M148 104 C162 74 172 42 164 22 C160 12 150 12 143 18 C126 32 108 48 94 66 Z" fill="#E8893A" stroke="#B85A1B" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M142 88 C150 66 156 46 152 32 C150 27 146 27 142 30 C130 42 118 52 108 64 Z" fill="#F7C9A8"/>
+  </g>
+  <ellipse cx="100" cy="116" rx="66" ry="56" fill="#E8893A" stroke="#B85A1B" stroke-width="3"/>
+  <path d="M100 62 Q91 62 89 82 Q86 102 70 116 Q52 132 60 150 Q74 172 100 172 Q126 172 140 150 Q148 132 130 116 Q114 102 111 82 Q109 62 100 62 Z" fill="#FFF6EA"/>
+  <ellipse cx="63" cy="134" rx="9" ry="5.5" fill="#F4A3A0" opacity=".6"/>
+  <ellipse cx="137" cy="134" rx="9" ry="5.5" fill="#F4A3A0" opacity=".6"/>
+  <g class="eyes">
+    <circle cx="76" cy="112" r="7.5" fill="#2B1D14"/>
+    <circle cx="124" cy="112" r="7.5" fill="#2B1D14"/>
+    <circle cx="78.5" cy="109.5" r="2.6" fill="#fff"/>
+    <circle cx="126.5" cy="109.5" r="2.6" fill="#fff"/>
+  </g>
+  <path d="M89 129 Q100 122 111 129 Q109 139 100 141 Q91 139 89 129 Z" fill="#2B1D14"/>
+  <path d="M100 141 Q100 150 91 151 M100 141 Q100 150 109 151" fill="none" stroke="#2B1D14" stroke-width="2.6" stroke-linecap="round"/>
+  <path class="tongue" d="M94 151 Q95 162 100 162 Q105 162 106 151 Q100 154 94 151 Z" fill="#F07C8A"/>
+</svg>
