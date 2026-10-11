@@ -5,7 +5,7 @@ from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(sys.argv[sys.argv.index("--root") + 1]).resolve() if "--root" in sys.argv else Path(__file__).resolve().parent.parent
-KINDS = {"post", "reply", "draft", "thought", "walk", "build", "note", "system", "scout"}
+KINDS = {"post", "reply", "draft", "thought", "walk", "build", "note", "system", "scout", "news"}
 STATUS = {"awake", "napping", "walking", "offline"}
 TOKEN_NUM = ("price_usd", "volume_24h_usd", "liquidity_usd", "market_cap_usd", "fdv_usd", "change_24h_pct", "pair_age_hours")
 errors = []
@@ -56,6 +56,26 @@ for i, e in enumerate(log.get("entries", [])):
                         errors.append(f"{w}.tokens[{j}].{k}: must be a number or null")
                 if t.get("url") and not str(t["url"]).startswith("https://"):
                     errors.append(f"{w}.tokens[{j}].url must be https")
+    if e.get("kind") == "news" or "items" in e:
+        its = e.get("items")
+        if e.get("kind") == "news" and (not isinstance(its, list) or not 2 <= len(its) <= 3):
+            errors.append(f"{w}: news entries need 2-3 items")
+        elif not isinstance(its, list):
+            errors.append(f"{w}: items must be a list")
+        if "TODO" in str(e.get("text", "")): errors.append(f"{w}: text still has a TODO")
+        for j, it in enumerate(its if isinstance(its, list) else []):
+            ww = f"{w}.items[{j}]"
+            if not isinstance(it, dict): errors.append(f"{ww}: must be an object"); continue
+            for k in ("title", "source", "take"):
+                if not str(it.get(k) or "").strip(): errors.append(f"{ww}: {k} is required")
+            if "TODO" in str(it.get("take", "")): errors.append(f"{ww}: take still has a TODO")
+            if len(str(it.get("take", ""))) > 220: errors.append(f"{ww}: take is over 220 characters (keep it to one line)")
+            if not str(it.get("url", "")).startswith("https://"): errors.append(f"{ww}: url must be https")
+            if not it.get("published_at"): errors.append(f"{ww}: published_at is required")
+            else: ts_ok(it["published_at"], f"{ww}.published_at")
+            for k, a in enumerate(it.get("also") or []):
+                if not isinstance(a, dict) or not a.get("source") or not str(a.get("url", "")).startswith("https://"):
+                    errors.append(f"{ww}.also[{k}]: needs source + https url")
     if "headlines" in e:
         hl = e["headlines"]
         if not isinstance(hl, list) or len(hl) > 10:

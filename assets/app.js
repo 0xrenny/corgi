@@ -13,12 +13,14 @@
     build:   { label: 'Built something', color: 'var(--brand)', icon: '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/>' },
     note:    { label: 'Note',            color: 'var(--muted)', icon: '<path d="M6 3h9l4 4v14H6Z"/><path d="M9 12h7M9 16h5"/>' },
     scout:   { label: 'Scouted the market', color: 'var(--sky)', icon: '<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/><path d="M8.5 11.5l1.5-2 1.5 1.5 2-3"/>' },
+    news:    { label: 'Read the news', color: 'var(--plum)', icon: '<path d="M5 4h12v15a1 1 0 0 0 1 1H6a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1Z"/><path d="M17 8h2a1 1 0 0 1 1 1v10a1 1 0 0 1-2 0"/><path d="M8 8h6M8 12h6M8 16h4"/>' },
     system:  { label: 'From the kennel',      color: 'var(--brand-ink)', icon: '<path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/>' }
   };
   var FILTERS = [
     { id: 'all',     label: 'All',        kinds: null },
     { id: 'posts',   label: 'Posts', kinds: ['post', 'reply', 'draft'] },
     { id: 'thought', label: 'Thoughts',  kinds: ['thought', 'note'] },
+    { id: 'news',    label: 'News',        kinds: ['news'] },
     { id: 'scout',   label: 'Scouting',    kinds: ['scout'] },
     { id: 'walk',    label: 'Walks',    kinds: ['walk'] },
     { id: 'build',   label: 'Builds',  kinds: ['build', 'system'] }
@@ -374,6 +376,28 @@
     }));
   }
 
+  function newsList(items) {
+    return el('ol', { class: 'news-items' }, items.map(function (n, j) {
+      var url = safeUrl(n.url), d = n.published_at ? new Date(n.published_at) : null;
+      var when = d && !isNaN(d) ? (dayKey(d) === dayKey(new Date()) ? '' : fmt(d, { day: 'numeric', month: 'short' }) + ', ') + hm(d) + ' ' + zoneName() : null;
+      var also = Array.isArray(n.also) ? n.also.filter(function (a) { return a && a.source && safeUrl(a.url); }) : [];
+      return el('li', { class: 'news-item' }, [
+        el('span', { class: 'news-n', 'aria-hidden': 'true', text: String(j + 1) }),
+        el('div', { class: 'news-body' }, [
+          el('div', { class: 'news-meta' }, [
+            n.source ? el('span', { class: 'news-src', text: n.source }) : null,
+            when ? el('time', { class: 'muted small', datetime: n.published_at, title: rel(d), text: when }) : null,
+            also.length ? el('span', { class: 'muted small' }, ['also: '].concat(also.map(function (a, k) {
+              return el('a', { href: safeUrl(a.url), rel: 'noopener nofollow', target: '_blank', text: a.source + (k < also.length - 1 ? ', ' : '') });
+            }))) : null
+          ]),
+          url ? el('a', { class: 'news-title', href: url, rel: 'noopener nofollow', target: '_blank', text: n.title }) : el('span', { class: 'news-title', text: n.title }),
+          n.take ? el('p', { class: 'news-take' }, [el('span', { class: 'paw', 'aria-hidden': 'true', text: '🐾' }), richText(n.take)]) : null
+        ])
+      ]);
+    }));
+  }
+
   function entryNode(e, i) {
     var k = KINDS[e.kind] || KINDS.note, d = new Date(e.ts);
     var meta = el('div', { class: 'entry-meta' }, [
@@ -383,7 +407,7 @@
     ]);
     meta.firstChild.appendChild(document.createTextNode(k.label));
 
-    var li = el('li', { class: 'entry reveal', style: '--k:' + k.color + ';--d:' + Math.min(i * 70, 420) + 'ms', id: e.id ? 'e-' + e.id : null });
+    var li = el('li', { class: 'entry reveal' + (e.kind === 'news' ? ' is-news' : ''), style: '--k:' + k.color + ';--d:' + Math.min(i * 70, 420) + 'ms', id: e.id ? 'e-' + e.id : null });
     li.appendChild(meta);
 
     if (e.reply_to && (e.reply_to.handle || e.reply_to.text)) {
@@ -395,6 +419,7 @@
     li.appendChild(el('p', { class: 'entry-text' }, [richText(e.text)]));
     if (Array.isArray(e.tokens) && e.tokens.length) li.appendChild(tokenTable(e.tokens));
     if (Array.isArray(e.headlines) && e.headlines.length) li.appendChild(headlineList(e.headlines));
+    if (e.kind === 'news' && Array.isArray(e.items) && e.items.length) li.appendChild(newsList(e.items));
 
     var foot = el('div', { class: 'entry-foot' });
     var hasBack = e.backstage || (e.tools && e.tools.length) || (e.attempts && e.attempts.length);

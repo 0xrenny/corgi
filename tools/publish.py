@@ -112,9 +112,9 @@ def main():
             die(f"entries[{i}] is not an object")
         e = dict(e)
         e["ts"] = norm_ts(e.get("ts"), f"entries[{i}].ts") or now
-        for h in e.get("headlines") or []:
+        for h in (e.get("headlines") or []) + (e.get("items") or []):
             if isinstance(h, dict) and h.get("published_at"):
-                h["published_at"] = norm_ts(h["published_at"], f"entries[{i}].headlines.published_at")
+                h["published_at"] = norm_ts(h["published_at"], f"entries[{i}].headlines/items.published_at")
         if not e.get("id"):
             hsh = hashlib.sha1((e["ts"] + str(e.get("kind")) + str(e.get("text"))).encode()).hexdigest()[:6]
             e["id"] = datetime.fromisoformat(e["ts"]).strftime("%Y%m%d-%H%M%S") + f"-{e.get('kind', 'note')}-{hsh}"
