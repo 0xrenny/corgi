@@ -1,0 +1,581 @@
+{
+ "schema_version": 1,
+ "paper": true,
+ "experiment": {
+  "name": "Corgi's paper copy-trade",
+  "started_at": "2026-10-11T11:26:24+03:00",
+  "day1": "2026-10-11",
+  "bankroll_usd": 100.0,
+  "rules": {
+   "size_pct_of_equity": 10.0,
+   "max_token_pct_of_equity": 25.0,
+   "min_order_usd": 1.0,
+   "delay_seconds": 60,
+   "slippage_pct": 1.0,
+   "fee_pct_per_side": 1.0,
+   "gas_usd_per_swap": 0.01
+  },
+  "method": [
+   "Wallets: signers of swaps >= $25 in the top 30 Robinhood Chain non-stablecoin pools by 24h volume (GeckoTerminal), repeat signers (2+ swaps) ranked by how many of those pools they traded, then activity, then size; top 70 checked on Blockscout.",
+   "Excluded: contracts, tagged addresses, > 40 swaps in the pool samples, > 20 swaps/hour, any buy+sell of the same token in one block (MEV/arb), fewer than 3 closed trades, a single token, or realized PnL <= 0.",
+   "Score: realized PnL over the wallet's last 48h of swaps (at most 150 transfers), each swap valued at the token's 5-minute candle close, average-cost basis. Top 8 kept. The list is frozen for the whole experiment.",
+   "Copying: only swaps after the start. A buy is copied at 10% of current equity (capped at cash and at 25% of equity per token, skipped under $1). A sell closes the same fraction of our position as the wallet sold of what it bought since we started following.",
+   "Fills: the real price 60s after the wallet's transaction (1-minute candle close, or the last trade before it), 1% worse for slippage, 1% fee per side, $0.01 gas. Corgi checks 4 times a day, so fills are reconstructed afterwards as if a bot had reacted live.",
+   "Marks: open positions are valued at GeckoTerminal's current token price on every run. If a price is missing, the last one is kept and marked stale."
+  ],
+  "selection": {
+   "at": "2026-10-11T11:17:27+03:00",
+   "window_hours": 48,
+   "universe_pools": 30,
+   "signers_seen": 3921,
+   "candidates_checked": 70,
+   "passed": 56,
+   "excluded": {
+    "single_swap_in_sample": 2663,
+    "bot_like_sample_frequency": 4,
+    "not_profitable": 13,
+    "fewer_than_min_closed_trades": 1
+   },
+   "sources_tried": {
+    "fomo_leaderboard": "not used: fomo.family's public boards mix chains and its API (fomoapi.io) needs a key; robinscan.io/leaderboard was unreachable from Corgi's box"
+   }
+  }
+ },
+ "updated_at": "2026-10-11T11:26:24+03:00",
+ "wallets": [
+  {
+   "address": "0x305cce99734d69a5ae927695b18c350763629930",
+   "label": "Beagle",
+   "rank": 1,
+   "explorer_url": "https://robinhoodchain.blockscout.com/address/0x305cce99734d69a5ae927695b18c350763629930",
+   "selection": {
+    "realized_pnl_usd": 11999.03,
+    "matched_sells": 47,
+    "wins": 34,
+    "win_rate": 0.723,
+    "swaps": 112,
+    "unpriced_swaps": 16,
+    "tokens": 14,
+    "volume_usd": 57183.42,
+    "history_hours": 47.7,
+    "first_swap_at": "2026-10-09T11:39:44+03:00",
+    "last_swap_at": "2026-10-11T11:21:57+03:00",
+    "pnl_curve": [
+     3384.44,
+     3387.49,
+     4086.07,
+     4088.39,
+     4123.62,
+     4193.95,
+     4512.12,
+     8485.31,
+     8955.46,
+     8850.32,
+     9143.34,
+     9486.87,
+     9842.16,
+     10012.92,
+     10164.18,
+     10375.59,
+     11099.41,
+     11099.41,
+     11465.26,
+     11650.33,
+     11977.15,
+     11975.72,
+     11963.67,
+     11999.03
+    ]
+   },
+   "copy": {
+    "copied_trades": 0,
+    "realized_pnl_usd": 0.0,
+    "wins": 0,
+    "losses": 0,
+    "last_trade_at": null,
+    "open_value_usd": 0.0,
+    "pnl_curve": [
+     0.0
+    ]
+   },
+   "cursor": {
+    "last_block": null,
+    "last_ts": null
+   }
+  },
+  {
+   "address": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "rank": 2,
+   "explorer_url": "https://robinhoodchain.blockscout.com/address/0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "selection": {
+    "realized_pnl_usd": 9508.03,
+    "matched_sells": 42,
+    "wins": 33,
+    "win_rate": 0.786,
+    "swaps": 94,
+    "unpriced_swaps": 11,
+    "tokens": 14,
+    "volume_usd": 46644.28,
+    "history_hours": 47.0,
+    "first_swap_at": "2026-10-09T11:27:30+03:00",
+    "last_swap_at": "2026-10-11T10:26:51+03:00",
+    "pnl_curve": [
+     2914.84,
+     3884.47,
+     4098.91,
+     6235.51,
+     6697.95,
+     6848.81,
+     6854.22,
+     6516.45,
+     6434.28,
+     6975.85,
+     7047.33,
+     7053.36,
+     7359.3,
+     7109.62,
+     7088.5,
+     7259.16,
+     7425.03,
+     7826.71,
+     8245.17,
+     8979.09,
+     9390.71,
+     9377.65,
+     9377.65,
+     9508.03
+    ]
+   },
+   "copy": {
+    "copied_trades": 0,
+    "realized_pnl_usd": 0.0,
+    "wins": 0,
+    "losses": 0,
+    "last_trade_at": null,
+    "open_value_usd": 0.0,
+    "pnl_curve": [
+     0.0
+    ]
+   },
+   "cursor": {
+    "last_block": null,
+    "last_ts": null
+   }
+  },
+  {
+   "address": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
+   "label": "Shiba",
+   "rank": 3,
+   "explorer_url": "https://robinhoodchain.blockscout.com/address/0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
+   "selection": {
+    "realized_pnl_usd": 9110.42,
+    "matched_sells": 43,
+    "wins": 33,
+    "win_rate": 0.767,
+    "swaps": 89,
+    "unpriced_swaps": 12,
+    "tokens": 12,
+    "volume_usd": 62793.07,
+    "history_hours": 46.7,
+    "first_swap_at": "2026-10-09T12:22:39+03:00",
+    "last_swap_at": "2026-10-11T11:04:35+03:00",
+    "pnl_curve": [
+     1798.66,
+     1829.2,
+     2016.04,
+     2322.98,
+     2708.43,
+     2712.86,
+     3409.77,
+     3846.56,
+     4339.83,
+     4659.63,
+     5186.52,
+     5186.52,
+     5623.4,
+     6044.5,
+     6027.49,
+     6347.92,
+     6347.92,
+     6445.59,
+     7947.24,
+     8096.88,
+     8100.07,
+     8996.55,
+     8996.55,
+     9110.42
+    ]
+   },
+   "copy": {
+    "copied_trades": 0,
+    "realized_pnl_usd": 0.0,
+    "wins": 0,
+    "losses": 0,
+    "last_trade_at": null,
+    "open_value_usd": 0.0,
+    "pnl_curve": [
+     0.0
+    ]
+   },
+   "cursor": {
+    "last_block": null,
+    "last_ts": null
+   }
+  },
+  {
+   "address": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "rank": 4,
+   "explorer_url": "https://robinhoodchain.blockscout.com/address/0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "selection": {
+    "realized_pnl_usd": 6853.44,
+    "matched_sells": 30,
+    "wins": 21,
+    "win_rate": 0.7,
+    "swaps": 71,
+    "unpriced_swaps": 15,
+    "tokens": 11,
+    "volume_usd": 51811.09,
+    "history_hours": 46.8,
+    "first_swap_at": "2026-10-09T11:40:57+03:00",
+    "last_swap_at": "2026-10-11T10:29:00+03:00",
+    "pnl_curve": [
+     1035.01,
+     919.36,
+     1290.41,
+     1653.27,
+     2042.46,
+     2590.94,
+     3195.23,
+     4885.84,
+     4712.83,
+     4699.32,
+     5144.0,
+     5059.93,
+     5176.6,
+     5534.55,
+     5867.61,
+     6010.6,
+     6006.17,
+     6006.17,
+     6020.56,
+     6315.69,
+     7069.93,
+     6774.2,
+     6904.01,
+     6853.44
+    ]
+   },
+   "copy": {
+    "copied_trades": 0,
+    "realized_pnl_usd": 0.0,
+    "wins": 0,
+    "losses": 0,
+    "last_trade_at": null,
+    "open_value_usd": 0.0,
+    "pnl_curve": [
+     0.0
+    ]
+   },
+   "cursor": {
+    "last_block": null,
+    "last_ts": null
+   }
+  },
+  {
+   "address": "0x603415a341b8957a235fc624af3cfbd28327a320",
+   "label": "Poodle",
+   "rank": 5,
+   "explorer_url": "https://robinhoodchain.blockscout.com/address/0x603415a341b8957a235fc624af3cfbd28327a320",
+   "selection": {
+    "realized_pnl_usd": 6164.13,
+    "matched_sells": 38,
+    "wins": 32,
+    "win_rate": 0.842,
+    "swaps": 75,
+    "unpriced_swaps": 10,
+    "tokens": 10,
+    "volume_usd": 55711.55,
+    "history_hours": 44.3,
+    "first_swap_at": "2026-10-09T14:51:54+03:00",
+    "last_swap_at": "2026-10-11T11:07:46+03:00",
+    "pnl_curve": [
+     2082.37,
+     2297.54,
+     2601.39,
+     2622.35,
+     2873.03,
+     3320.57,
+     3340.59,
+     3383.45,
+     3297.52,
+     3364.34,
+     3835.93,
+     4180.33,
+     4379.64,
+     4439.13,
+     4652.0,
+     4811.14,
+     4917.41,
+     4934.46,
+     4937.73,
+     5356.28,
+     5756.84,
+     5758.04,
+     5772.03,
+     6164.13
+    ]
+   },
+   "copy": {
+    "copied_trades": 0,
+    "realized_pnl_usd": 0.0,
+    "wins": 0,
+    "losses": 0,
+    "last_trade_at": null,
+    "open_value_usd": 0.0,
+    "pnl_curve": [
+     0.0
+    ]
+   },
+   "cursor": {
+    "last_block": null,
+    "last_ts": null
+   }
+  },
+  {
+   "address": "0xef0bb67423b1c370e2477d535dc28ba728a73c04",
+   "label": "Dachshund",
+   "rank": 6,
+   "explorer_url": "https://robinhoodchain.blockscout.com/address/0xef0bb67423b1c370e2477d535dc28ba728a73c04",
+   "selection": {
+    "realized_pnl_usd": 5463.64,
+    "matched_sells": 15,
+    "wins": 12,
+    "win_rate": 0.8,
+    "swaps": 58,
+    "unpriced_swaps": 10,
+    "tokens": 12,
+    "volume_usd": 28496.85,
+    "history_hours": 45.5,
+    "first_swap_at": "2026-10-09T13:54:51+03:00",
+    "last_swap_at": "2026-10-11T11:22:29+03:00",
+    "pnl_curve": [
+     -9.05,
+     -24.4,
+     -24.38,
+     -24.37,
+     374.04,
+     802.17,
+     807.41,
+     807.41,
+     1076.54,
+     1076.54,
+     2183.41,
+     2623.34,
+     2800.47,
+     3358.44,
+     5463.64
+    ]
+   },
+   "copy": {
+    "copied_trades": 0,
+    "realized_pnl_usd": 0.0,
+    "wins": 0,
+    "losses": 0,
+    "last_trade_at": null,
+    "open_value_usd": 0.0,
+    "pnl_curve": [
+     0.0
+    ]
+   },
+   "cursor": {
+    "last_block": null,
+    "last_ts": null
+   }
+  },
+  {
+   "address": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "rank": 7,
+   "explorer_url": "https://robinhoodchain.blockscout.com/address/0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "selection": {
+    "realized_pnl_usd": 5198.25,
+    "matched_sells": 32,
+    "wins": 24,
+    "win_rate": 0.75,
+    "swaps": 94,
+    "unpriced_swaps": 25,
+    "tokens": 13,
+    "volume_usd": 30148.36,
+    "history_hours": 47.8,
+    "first_swap_at": "2026-10-09T11:29:18+03:00",
+    "last_swap_at": "2026-10-11T11:17:00+03:00",
+    "pnl_curve": [
+     772.49,
+     1254.58,
+     1653.02,
+     1584.97,
+     1681.06,
+     1535.79,
+     1605.19,
+     1612.74,
+     2021.67,
+     2837.62,
+     3446.36,
+     3545.32,
+     3619.37,
+     3997.83,
+     4331.85,
+     4344.59,
+     5117.11,
+     5505.05,
+     5816.23,
+     5922.11,
+     5794.31,
+     5892.0,
+     5805.4,
+     5198.25
+    ]
+   },
+   "copy": {
+    "copied_trades": 0,
+    "realized_pnl_usd": 0.0,
+    "wins": 0,
+    "losses": 0,
+    "last_trade_at": null,
+    "open_value_usd": 0.0,
+    "pnl_curve": [
+     0.0
+    ]
+   },
+   "cursor": {
+    "last_block": null,
+    "last_ts": null
+   }
+  },
+  {
+   "address": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
+   "label": "Basenji",
+   "rank": 8,
+   "explorer_url": "https://robinhoodchain.blockscout.com/address/0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
+   "selection": {
+    "realized_pnl_usd": 5082.19,
+    "matched_sells": 37,
+    "wins": 21,
+    "win_rate": 0.568,
+    "swaps": 139,
+    "unpriced_swaps": 0,
+    "tokens": 11,
+    "volume_usd": 49353.69,
+    "history_hours": 23.2,
+    "first_swap_at": "2026-10-10T10:34:59+03:00",
+    "last_swap_at": "2026-10-11T09:49:09+03:00",
+    "pnl_curve": [
+     691.52,
+     751.54,
+     853.72,
+     853.72,
+     844.3,
+     1031.2,
+     1150.48,
+     1693.85,
+     1693.85,
+     1674.54,
+     1630.88,
+     1623.95,
+     1707.99,
+     1653.09,
+     1756.36,
+     1943.1,
+     1911.63,
+     1747.33,
+     1887.56,
+     1923.67,
+     2291.42,
+     2493.1,
+     5111.2,
+     5082.19
+    ]
+   },
+   "copy": {
+    "copied_trades": 0,
+    "realized_pnl_usd": 0.0,
+    "wins": 0,
+    "losses": 0,
+    "last_trade_at": null,
+    "open_value_usd": 0.0,
+    "pnl_curve": [
+     0.0
+    ]
+   },
+   "cursor": {
+    "last_block": null,
+    "last_ts": null
+   }
+  }
+ ],
+ "trades": [],
+ "skipped": [],
+ "positions": [],
+ "tracked": {},
+ "balance_history": [
+  {
+   "ts": "2026-10-11T11:26:24+03:00",
+   "equity": 100.0,
+   "cash": 100.0,
+   "positions_value": 0.0,
+   "event": "start"
+  }
+ ],
+ "summary": {
+  "equity_usd": 100.0,
+  "cash_usd": 100.0,
+  "positions_value_usd": 0,
+  "pnl_usd": 0.0,
+  "pnl_pct": 0.0,
+  "realized_pnl_usd": 0,
+  "unrealized_pnl_usd": 0,
+  "trades": 0,
+  "buys": 0,
+  "sells": 0,
+  "wins": 0,
+  "losses": 0,
+  "win_rate": null,
+  "max_drawdown_pct": 0.0,
+  "peak_equity_usd": 100.0,
+  "fees_paid_usd": 0,
+  "open_positions": 0,
+  "win_streak": 0,
+  "skipped": 0,
+  "best_trade_usd": null,
+  "worst_trade_usd": null
+ },
+ "runs": [],
+ "runs_log": [
+  {
+   "at": "2026-10-11T11:26:24+03:00",
+   "kind": "select",
+   "sources": {
+    "geckoterminal": {
+     "ok": true,
+     "calls": 63,
+     "failed_calls": 0,
+     "errors": []
+    },
+    "blockscout": {
+     "ok": true,
+     "calls": 245,
+     "failed_calls": 0,
+     "errors": []
+    },
+    "dexscreener": {
+     "ok": true,
+     "calls": 1,
+     "failed_calls": 0,
+     "errors": []
+    }
+   }
+  }
+ ]
+}

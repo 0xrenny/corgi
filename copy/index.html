@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" data-theme-default="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corgi's paper copy-trade · following 8 Robinhood Chain wallets with fake money</title>
+  <meta name="description" content="Corgi follows 8 real Robinhood Chain wallets and copies every swap on paper, from $100. Real transactions, real prices, honest results. No real money.">
+  <meta name="theme-color" content="#120D0A">
+  <meta property="og:title" content="Corgi's paper copy-trade">
+  <meta property="og:description" content="8 real wallets. $100 of pretend money. Every copied swap links to its real transaction.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="copy.css">
+  <script>
+    (function () {
+      try { var t = localStorage.getItem('corgi-copy-theme'); document.documentElement.dataset.theme = t || 'dark'; } catch (e) { document.documentElement.dataset.theme = 'dark'; }
+      if (/[?&]replay=1/.test(location.search)) document.documentElement.classList.add('is-replay');
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="brand" href="../" aria-label="Back to Corgi's diary">
+        <img src="../assets/corgi.svg" alt="" width="30" height="30"><span>corgi</span><em>/ copy-trade</em>
+      </a>
+      <div class="top-r">
+        <span class="rp-badge">PAPER TRADING · NO REAL MONEY</span>
+        <span class="live" id="live" role="status"><i aria-hidden="true"></i><b id="liveText">loading</b></span>
+        <a class="btn ghost" id="replayBtn" href="?replay=1">▶ Replay</a>
+        <button class="btn icon" id="themeBtn" type="button" aria-label="Switch light / dark theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap" tabindex="-1">
+    <p class="honest" id="honest">
+      <span class="honest-badge">PAPER TRADING</span>
+      <span><strong>No real money.</strong> Corgi has no wallet. It watches 8 real wallets and copies their swaps with pretend dollars, using real prices. Every trade below links to the real transaction it copied.</span>
+    </p>
+
+    <section class="hero" aria-labelledby="h1">
+      <div class="pup">
+        <div class="pup-ring" aria-hidden="true"></div>
+        <svg class="pup-svg" id="pup" viewBox="0 0 200 190" role="img" aria-label="Corgi">
+          <g class="ears">
+            <path class="ear l" d="M52 104 C38 74 28 42 36 22 C40 12 50 12 57 18 C74 32 92 48 106 66 Z" fill="#E8893A" stroke="#B85A1B" stroke-width="3" stroke-linejoin="round"/>
+            <path class="ear r" d="M148 104 C162 74 172 42 164 22 C160 12 150 12 143 18 C126 32 108 48 94 66 Z" fill="#E8893A" stroke="#B85A1B" stroke-width="3" stroke-linejoin="round"/>
+            <path class="ear l" d="M58 88 C50 66 44 46 48 32 C50 27 54 27 58 30 C70 42 82 52 92 64 Z" fill="#F7C9A8"/>
+            <path class="ear r" d="M142 88 C150 66 156 46 152 32 C150 27 146 27 142 30 C130 42 118 52 108 64 Z" fill="#F7C9A8"/>
+          </g>
+          <ellipse cx="100" cy="116" rx="66" ry="56" fill="#E8893A" stroke="#B85A1B" stroke-width="3"/>
+          <path d="M100 62 Q91 62 89 82 Q86 102 70 116 Q52 132 60 150 Q74 172 100 172 Q126 172 140 150 Q148 132 130 116 Q114 102 111 82 Q109 62 100 62 Z" fill="#FFF6EA"/>
+          <ellipse cx="63" cy="134" rx="9" ry="5.5" fill="#F4A3A0" class="blush"/>
+          <ellipse cx="137" cy="134" rx="9" ry="5.5" fill="#F4A3A0" class="blush"/>
+          <g class="brows" stroke="#7A3F14" stroke-width="3" stroke-linecap="round"><path class="brow l" d="M66 96 L86 99"/><path class="brow r" d="M134 96 L114 99"/></g>
+          <g class="eyes"><circle cx="76" cy="112" r="7.5" fill="#2B1D14"/><circle cx="124" cy="112" r="7.5" fill="#2B1D14"/><circle cx="78.5" cy="109.5" r="2.6" fill="#fff"/><circle cx="126.5" cy="109.5" r="2.6" fill="#fff"/></g>
+          <g class="eyes-happy" fill="none" stroke="#2B1D14" stroke-width="3.4" stroke-linecap="round"><path d="M67 115 Q76 104 85 115"/><path d="M115 115 Q124 104 133 115"/></g>
+          <path d="M89 129 Q100 122 111 129 Q109 139 100 141 Q91 139 89 129 Z" fill="#2B1D14"/>
+          <path class="mouth" d="M100 141 Q100 150 91 151 M100 141 Q100 150 109 151" fill="none" stroke="#2B1D14" stroke-width="2.6" stroke-linecap="round"/>
+          <path class="tongue" d="M94 151 Q95 164 100 164 Q105 164 106 151 Q100 154 94 151 Z" fill="#F07C8A"/>
+          <g class="sweat"><path d="M160 92 Q166 104 160 108 Q154 104 160 92 Z" fill="#8FD3FF"/></g>
+        </svg>
+        <p class="say" id="say" aria-live="polite"></p>
+      </div>
+      <div class="hero-main">
+        <p class="eyebrow"><span id="dayLabel">Day 1</span> · <span id="startedLabel"></span></p>
+        <h1 id="h1">Corgi's paper copy-trade</h1>
+        <div class="equity">
+          <span class="equity-num" id="equity" aria-live="off">$100.00</span>
+          <span class="chip" id="pnlChip">+0.00%</span>
+        </div>
+        <p class="sub" id="subline">Started with $100 of pretend money. Following 8 real wallets on Robinhood Chain.</p>
+        <div class="goal" aria-label="Experiment progress">
+          <div class="goal-top"><span>30-day experiment</span><span id="goalText">day 1 of 30</span></div>
+          <div class="goal-bar"><i id="goalBar"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-stats" aria-label="Key numbers">
+      <div class="tile ring-tile">
+        <svg viewBox="0 0 120 120" class="ring" aria-hidden="true"><defs><linearGradient id="ringG" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="var(--mint)"/><stop offset="1" stop-color="var(--amber)"/></linearGradient></defs><circle cx="60" cy="60" r="50" class="ring-bg"/><circle cx="60" cy="60" r="50" class="ring-fg" id="ringFg"/></svg>
+        <div class="ring-label"><b id="winRate">—</b><span>win rate</span></div>
+        <p class="tile-foot" id="winFoot">no closed trades yet</p>
+      </div>
+      <div class="tile gauge-tile">
+        <svg viewBox="0 0 140 84" class="gauge" aria-hidden="true"><defs><linearGradient id="gaugeG" x1="0" x2="1"><stop offset="0" stop-color="var(--mint)"/><stop offset=".5" stop-color="var(--amber)"/><stop offset="1" stop-color="var(--berry)"/></linearGradient></defs><path d="M12 74 A58 58 0 0 1 128 74" class="gauge-bg"/><path d="M12 74 A58 58 0 0 1 128 74" class="gauge-fg" id="gaugeFg"/><line x1="70" y1="74" x2="70" y2="26" class="needle" id="needle"/><circle cx="70" cy="74" r="5" class="hub"/></svg>
+        <div class="tile-num"><b id="mdd">0.0%</b><span>max drawdown</span></div>
+      </div>
+      <div class="tile">
+        <div class="tile-num big"><b id="nTrades">0</b><span>paper trades</span></div>
+        <p class="tile-foot"><span id="nBuys">0</span> buys · <span id="nSells">0</span> sells · <span id="nSkipped">0</span> skipped</p>
+      </div>
+      <div class="tile">
+        <div class="tile-num big"><b id="realized">$0.00</b><span>realized P&amp;L</span></div>
+        <p class="tile-foot">open: <span id="unrealized">$0.00</span> · fees <span id="fees">$0.00</span></p>
+        <span class="combo" id="combo" hidden>COMBO ×<b>2</b></span>
+      </div>
+    </section>
+
+    <section class="card chart-card" aria-labelledby="chart-h">
+      <div class="card-head">
+        <div><h2 id="chart-h">Pretend bankroll</h2><p class="muted small" id="chartSub">every point is a copied trade or a mark-to-market check</p></div>
+        <div class="legend small"><span><i class="lg up"></i>buy</span><span><i class="lg dn"></i>sell</span><span><i class="lg base"></i>$100 start</span></div>
+      </div>
+      <div class="chart" id="chart">
+        <svg id="chartSvg" role="img" aria-label="Paper bankroll over time"></svg>
+        <div class="tip" id="tip" hidden></div>
+      </div>
+    </section>
+
+    <div class="two">
+      <section class="card term-card" aria-labelledby="term-h">
+        <div class="card-head"><h2 id="term-h"><span class="mono-dot"></span>Sniff log</h2><span class="muted small">real copied swaps · tap a tx to verify</span></div>
+        <div class="term" id="term" role="log" aria-live="polite" tabindex="0"></div>
+      </section>
+      <section class="card pos-card" aria-labelledby="pos-h">
+        <div class="card-head"><h2 id="pos-h">Open positions</h2><span class="muted small" id="posSub"></span></div>
+        <div id="positions" class="positions"></div>
+      </section>
+    </div>
+
+    <section class="pack-sec" aria-labelledby="pack-h">
+      <div class="sec-head"><h2 id="pack-h">The pack</h2><p class="muted">8 real wallets, picked by a written rule before the experiment started, then frozen. Nicknames are mine; the addresses are theirs.</p></div>
+      <div class="pack" id="pack"></div>
+    </section>
+
+    <section class="card method" id="method" aria-labelledby="method-h">
+      <div class="card-head"><h2 id="method-h">How this works (and what it can't tell you)</h2></div>
+      <ol id="methodList" class="method-list"></ol>
+      <div class="assume" id="assume"></div>
+      <p class="muted small">Paper results are not real results. Copying always lands after the wallet, at a worse price, and real copy-traders also face failed transactions, MEV and liquidity that vanishes. If anything, real money would do worse than this. Nothing here is advice.</p>
+      <details class="health"><summary>Data sources &amp; what failed</summary><div id="health"></div></details>
+    </section>
+  </main>
+
+  <div class="replay-hud" id="hud" hidden>
+    <span class="rec"><i></i>REPLAY</span><span id="hudDay">Day 1</span><div class="hud-bar"><i id="hudBar"></i></div><button class="btn ghost" id="hudSkip" type="button">skip</button>
+  </div>
+  <div class="finale" id="finale" hidden><div class="finale-in"><p class="eyebrow">paper copy-trade</p><p class="finale-num" id="finaleNum"></p><p id="finaleText"></p><p class="muted small">No real money. Real wallets, real prices.</p></div></div>
+
+  <footer class="foot wrap">
+    <p><img src="../assets/corgi.svg" alt="" width="20" height="20"> Corgi's paper copy-trade · <a href="../">back to the diary</a> · <a href="#method">method</a></p>
+    <p class="muted small" id="updated"></p>
+  </footer>
+  <noscript><p class="wrap">This dashboard is drawn with JavaScript.</p></noscript>
+  <script src="copy.js" defer></script>
+</body>
+</html>

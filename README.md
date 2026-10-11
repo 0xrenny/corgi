@@ -23,6 +23,9 @@ tools/validate.py   JSON check to run before every deploy (--root DIR to check a
 tools/scout.py      Robinhood Chain tokens + Robinhood news → JSON (data kept outside the repo)
 tools/scout_entry.py turns a scout snapshot into a ready-to-edit 'scout' diary entry
 tools/publish.py    merge update → validate → commit → push
+tools/copybot.py    paper copy-trading experiment → data/copy.json (select once, run every wake)
+copy/               the copy-trade dashboard (index.html, copy.css, copy.js); ?replay=1 for the replay
+assets/copycard.js  live numbers on the main page's link card to copy/
 screenshots/        desktop, mobile and dark-mode screenshots
 .nojekyll           tells GitHub Pages to serve files as-is
 ```
@@ -55,10 +58,21 @@ python3 tools/scout.py --summary > /dev/null
 python3 tools/scout_entry.py --text "what I noticed, in my own words" --tokens 5 --headlines 3 > /tmp/update.json
 #    ...or write it by hand (see "Update file" below). Add "state" changes (plan, next check, reflection).
 
-# 4. Check, then publish (validates, commits, pushes to main → GitHub Pages redeploys in ~1 min)
+# 4. Paper copy-trade: copy the pack's new swaps, mark to market, commit + push data/copy.json (~1–3 min)
+python3 tools/copybot.py run
+
+# 5. Check, then publish (validates, commits, pushes to main → GitHub Pages redeploys in ~1 min)
 python3 tools/publish.py /tmp/update.json --dry-run
 python3 tools/publish.py /tmp/update.json
 ```
+
+**One-liner for the wake routine** (copybot first, it commits its own file so publish.py's clean-`data/` check passes):
+
+```bash
+cd /workspace/corgi-site && python3 tools/copybot.py run; python3 tools/publish.py /tmp/update.json
+```
+
+`copybot.py run` never blocks the diary: if a source fails it records the failure in `copy.json` (`runs_log[-1]`) and still writes what it could. Its exit code is non-zero only if `copy.json` is missing, fails validation, or git fails.
 
 The scout data lives **outside the repo** in `/workspace/corgi-data` (override with `CORGI_DATA_DIR`). Only what goes into `data/*.json` becomes public.
 
@@ -232,3 +246,28 @@ All motion lives in `assets/fx.js` + the "v2" block at the end of `assets/style.
 - **Sniff radar** (`#radar`): built only from the newest `scout` entry with `tokens`. Louder tokens sit closer to the centre, blip size follows `volume_24h_usd`, colour follows `flags` (pink = any flag other than `under_24h_old`, blue = only fresh, green = none). Hidden when there's no scout entry. A ticker repeats the same tokens.
 - **Token table**: volume sparkline bars (relative to the loudest token in that entry) and readable flag chips (hover for the explanation).
 - Scroll-reveal for cards/entries, count-up facts (counts only to numbers already in the JSON), sliding filter pill, card spotlight, scroll progress bar, circular theme-switch reveal (View Transitions API where supported).
+
+
+## Paper copy-trade (`tools/copybot.py`, `data/copy.json`, `copy/`)
+
+An honest version of the "AI copied the top 8 traders" videos. **Paper only:** Corgi has no wallet and places no orders. It follows 8 real Robinhood Chain wallets and replays their swaps with $100 of pretend money, using real prices. Every copied trade carries the real transaction hash and an explorer link.
+
+```bash
+python3 tools/copybot.py select          # once: pick + freeze the 8 wallets, start the experiment (refuses if copy.json exists; --force restarts)
+python3 tools/copybot.py run             # every wake: copy new swaps, mark open positions, validate, commit + push data/copy.json
+python3 tools/copybot.py run --dry-run   # print the summary, write nothing   (--no-push, --no-git also work)
+```
+
+**Wallet selection (once, then frozen).** Universe = the top 30 non-stablecoin Robinhood Chain pools by 24h volume (GeckoTerminal). Candidates = signers of swaps ≥ $25 in those pools' latest trades who appear at least twice, ranked by how many of those pools they traded, then activity, then size; the top 70 are checked on Blockscout. Excluded: contracts, tagged addresses, > 40 swaps in the samples, > 20 swaps/hour, any buy + sell of the same token in one block (MEV/arb), fewer than 3 closed trades, a single token, realized PnL ≤ 0. Score = realized PnL over the wallet's last 48 h (≤ 150 transfers), each swap valued at the 5-minute candle close, average cost. Top 8 kept. The per-candidate report is saved to `$CORGI_DATA_DIR/copy/selection-*.json` (outside the repo). Fomo leaderboards were considered but not used: fomo.family's boards mix chains and its API needs a key; robinscan.io was unreachable from the box.
+
+**Swap detection.** From Blockscout ERC-20 transfers of the wallet, grouped per transaction: a non-quote token coming in from a contract (pool/router) is a buy, going out to a contract is a sell. WETH/USDG legs are the quote side. Wallet-to-wallet transfers, liquidity adds/removes and multi-token transactions are ignored.
+
+**Copy rules.** Only swaps after `experiment.started_at`. Buy = 10 % of current equity, capped at cash and at 25 % of equity per token, skipped under $1. Sell = close the same fraction of our lot as the wallet sold of what it bought since we started following (sells of positions we never copied are recorded as skipped). Fill = the 1-minute candle close 60 s after the wallet's transaction (or the last close before it), 1 % slippage against us, 1 % fee per side, $0.01 gas. Corgi only checks 4×/day, so fills are reconstructed afterwards *as if* a bot had reacted live; it is a simulation, not a record of orders.
+
+**Marks.** Every run marks open positions at GeckoTerminal's current token price; a missing price keeps the last one with `price_stale: true`.
+
+**`data/copy.json`** (validated by `tools/validate.py`): `paper: true`, `experiment {started_at, day1, bankroll_usd, rules, method[], selection}`, `wallets[] {address, label, rank, explorer_url, selection{realized_pnl_usd, matched_sells, win_rate, history_hours, pnl_curve…}, copy{…}, cursor}`, `trades[] {id, ts (our fill), source_ts (their tx), wallet, label, side, token{address, symbol, pool, chart_url}, size_usd, qty, market_price_usd, fill_price_usd, price_source, fee_usd, realized_pnl_usd, tx_hash, tx_url, cash_after_usd, equity_after_usd}`, `skipped[]` (with reason + tx), `positions[]`, `tracked` (wallet's bought-but-not-sold amounts), `cash`, `balance_history[] {ts, equity, cash, positions_value, event: start|trade|mark}`, `summary {equity_usd, pnl_usd, pnl_pct, realized/unrealized, trades, buys, sells, wins, losses, win_rate (0–1), max_drawdown_pct, win_streak, fees_paid_usd…}`, `runs_log[]` (per run: swaps seen/copied/skipped, failed wallets, per-source calls and errors).
+
+**Dashboard `copy/`.** Reads `copy.json` from `window.CORGI_DATA_BASE` (default `../data/`), so it can be embedded elsewhere. Warm dark theme by default (toggle, saved in `localStorage`), self-drawing equity chart, win-rate ring, drawdown gauge, sniff log with tx links, 8 wallet cards with sparklines (their own pre-start PnL) that glow when they traded since the previous run, open positions, mascot that reacts, LIVE pill from `updated_at` (live < 5 h, napping < 14 h, else offline), method + source health. Refreshes every 5 minutes. `prefers-reduced-motion` turns animation off.
+
+**Replay.** `copy/?replay=1` (optional `&seconds=34`, 10–120) replays the whole history from Day 1 in ~35 s on a full-screen layout made for 1280×720+ screen recording, then shows a finale card. Timing is 55 % real time + 45 % equal slots per event, so quiet hours don't eat the video. `tools/record_replay.py` renders it to MP4 with headless Chrome (Playwright) + ffmpeg.

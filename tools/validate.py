@@ -68,6 +68,64 @@ for i, e in enumerate(log.get("entries", [])):
                     errors.append(f"{w}.headlines[{j}].url must be http(s)")
                 if h.get("published_at"): ts_ok(h["published_at"], f"{w}.headlines[{j}].published_at")
 
+# ---- data/copy.json (paper copy-trading experiment), optional
+copy_note = ""
+cp = ROOT / "data/copy.json"
+if cp.exists():
+    import re
+    HEX40, HEX64 = re.compile(r"^0x[0-9a-f]{40}$"), re.compile(r"^0x[0-9a-f]{64}$")
+    def isnum(v): return isinstance(v, (int, float)) and not isinstance(v, bool) and v == v
+    try:
+        c = json.loads(cp.read_text("utf-8"))
+    except Exception as ex:
+        c = None; errors.append(f"copy.json: not valid JSON: {ex}")
+    if c is not None:
+        if c.get("paper") is not True: errors.append("copy.json: paper must be true (this is a paper experiment)")
+        ex_ = c.get("experiment") or {}
+        if ex_.get("started_at"): ts_ok(ex_["started_at"], "copy.experiment.started_at")
+        else: errors.append("copy.json: experiment.started_at missing")
+        if not isnum(ex_.get("bankroll_usd")) or ex_["bankroll_usd"] <= 0: errors.append("copy.json: experiment.bankroll_usd must be > 0")
+        for k in ("size_pct_of_equity", "delay_seconds", "slippage_pct", "fee_pct_per_side", "gas_usd_per_swap"):
+            if not isnum((ex_.get("rules") or {}).get(k)): errors.append(f"copy.experiment.rules.{k} must be a number")
+        if c.get("updated_at"): ts_ok(c["updated_at"], "copy.updated_at")
+        ws = c.get("wallets") or []
+        if not 1 <= len(ws) <= 8: errors.append("copy.json: 1-8 wallets expected")
+        waddr = set()
+        for i, w in enumerate(ws):
+            if not HEX40.match(str(w.get("address", ""))): errors.append(f"copy.wallets[{i}].address must be a lowercase 0x address")
+            if not w.get("label"): errors.append(f"copy.wallets[{i}]: label missing")
+            waddr.add(w.get("address"))
+        tids = set()
+        for i, t in enumerate(c.get("trades") or []):
+            w = f"copy.trades[{i}]"
+            ts_ok(t.get("ts"), w + ".ts"); ts_ok(t.get("source_ts"), w + ".source_ts")
+            if t.get("side") not in ("buy", "sell"): errors.append(f"{w}.side must be buy/sell")
+            if t.get("wallet") not in waddr: errors.append(f"{w}: wallet is not one of the followed wallets")
+            if not HEX64.match(str(t.get("tx_hash", ""))): errors.append(f"{w}: tx_hash must be a real 0x… hash")
+            if not str(t.get("tx_url", "")).startswith("https://robinhoodchain.blockscout.com/tx/"): errors.append(f"{w}: tx_url must point to the explorer")
+            for k in ("size_usd", "qty", "fill_price_usd", "market_price_usd", "cash_after_usd", "equity_after_usd"):
+                if not isnum(t.get(k)) or t[k] < 0: errors.append(f"{w}.{k} must be a number >= 0")
+            if t.get("side") == "sell" and not isnum(t.get("realized_pnl_usd")): errors.append(f"{w}: sell needs realized_pnl_usd")
+            if not (t.get("token") or {}).get("address"): errors.append(f"{w}: token.address missing")
+            if t.get("id") in tids: errors.append(f"{w}: duplicate id {t.get('id')}")
+            tids.add(t.get("id"))
+        hist = c.get("balance_history") or []
+        if not hist: errors.append("copy.json: balance_history is empty")
+        prev = None
+        for i, h in enumerate(hist):
+            ts_ok(h.get("ts"), f"copy.balance_history[{i}]")
+            if not isnum(h.get("equity")): errors.append(f"copy.balance_history[{i}].equity must be a number")
+            if prev and h.get("ts", "") and datetime.fromisoformat(h["ts"]) < datetime.fromisoformat(prev): errors.append(f"copy.balance_history[{i}]: not in time order")
+            prev = h.get("ts")
+        for i, p in enumerate(c.get("positions") or []):
+            for k in ("qty", "cost_usd", "value_usd"):
+                if not isnum(p.get(k)): errors.append(f"copy.positions[{i}].{k} must be a number")
+        s = c.get("summary") or {}
+        for k in ("equity_usd", "pnl_usd", "max_drawdown_pct"):
+            if not isnum(s.get(k)): errors.append(f"copy.summary.{k} must be a number")
+        if s.get("win_rate") is not None and not (isnum(s["win_rate"]) and 0 <= s["win_rate"] <= 1): errors.append("copy.summary.win_rate must be 0-1 or null")
+        copy_note = f" + copy.json ({len(ws)} wallets, {len(c.get('trades') or [])} paper trades)"
+
 if errors:
     print("\n".join(errors)); sys.exit(1)
-print(f"ok: state + {len(log.get('entries', []))} log entries")
+print(f"ok: state + {len(log.get('entries', []))} log entries{copy_note}")

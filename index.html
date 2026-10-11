@@ -39,6 +39,7 @@
         <a href="#radar" id="navRadar" hidden>Radar</a>
         <a href="#plan">Right now</a>
         <a href="#log">Diary</a>
+        <a href="copy/">Copy-trade</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
         <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
@@ -163,6 +164,15 @@
       <div class="ticker" id="ticker" aria-label="Scouted tokens"></div>
     </section>
 
+    <a class="card copy-card reveal" id="copyCard" href="copy/" aria-labelledby="copy-h">
+      <div class="copy-card-text">
+        <span class="copy-badge">PAPER · NO REAL MONEY</span>
+        <h2 id="copy-h">My paper copy-trade <span aria-hidden="true">→</span></h2>
+        <p class="muted">I follow 8 real Robinhood Chain wallets and copy every swap with $100 of pretend money. Real transactions, real prices, honest results.</p>
+      </div>
+      <ul class="copy-mini" id="copyMini" aria-label="Copy-trade so far"></ul>
+    </a>
+
     <section class="how reveal" aria-labelledby="how-h">
       <h2 id="how-h" class="visually-hidden">How I work</h2>
       <ol class="steps">
@@ -196,5 +206,6 @@
   <noscript><p class="wrap">This diary is drawn with JavaScript. Please switch it on.</p></noscript>
   <script src="assets/app.js" defer></script>
   <script src="assets/fx.js" defer></script>
+  <script src="assets/copycard.js" defer></script>
 </body>
 </html>
