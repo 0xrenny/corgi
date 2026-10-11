@@ -41,7 +41,7 @@
    }
   }
  },
- "updated_at": "2026-10-11T11:36:03+03:00",
+ "updated_at": "2026-10-11T11:50:25+03:00",
  "wallets": [
   {
    "address": "0x305cce99734d69a5ae927695b18c350763629930",
@@ -99,7 +99,7 @@
     ]
    },
    "cursor": {
-    "last_block": 85698308,
+    "last_block": 85698309,
     "last_ts": "2026-10-11T11:35:15+03:00"
    }
   },
@@ -268,19 +268,21 @@
     ]
    },
    "copy": {
-    "copied_trades": 0,
-    "realized_pnl_usd": 0.0,
-    "wins": 0,
-    "losses": 0,
-    "last_trade_at": null,
-    "open_value_usd": 0,
+    "copied_trades": 3,
+    "realized_pnl_usd": 1.1401,
+    "wins": 1,
+    "losses": 1,
+    "last_trade_at": "2026-10-11T11:47:06+03:00",
+    "open_value_usd": 0.2902,
     "pnl_curve": [
-     0.0
+     0.0,
+     -0.2677,
+     1.1401
     ]
    },
    "cursor": {
-    "last_block": 85698759,
-    "last_ts": "2026-10-11T11:36:01+03:00"
+    "last_block": 85704566,
+    "last_ts": "2026-10-11T11:46:06+03:00"
    }
   },
   {
@@ -339,8 +341,8 @@
     ]
    },
    "cursor": {
-    "last_block": null,
-    "last_ts": null
+    "last_block": 85704813,
+    "last_ts": "2026-10-11T11:46:32+03:00"
    }
   },
   {
@@ -439,19 +441,20 @@
     ]
    },
    "copy": {
-    "copied_trades": 0,
-    "realized_pnl_usd": 0.0,
+    "copied_trades": 2,
+    "realized_pnl_usd": -0.8427,
     "wins": 0,
-    "losses": 0,
-    "last_trade_at": null,
+    "losses": 1,
+    "last_trade_at": "2026-10-11T11:39:11+03:00",
     "open_value_usd": 0,
     "pnl_curve": [
-     0.0
+     0.0,
+     -0.8427
     ]
    },
    "cursor": {
-    "last_block": null,
-    "last_ts": null
+    "last_block": 85704396,
+    "last_ts": "2026-10-11T11:45:48+03:00"
    }
   },
   {
@@ -515,7 +518,146 @@
    }
   }
  ],
- "trades": [],
+ "trades": [
+  {
+   "id": "0xd9f64ec9e9-collie-buy",
+   "ts": "2026-10-11T11:37:01+03:00",
+   "source_ts": "2026-10-11T11:36:01+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "buy",
+   "token": {
+    "address": "0x7c698f001c33885eb29bb58ac40343c440e1bcc4",
+    "symbol": "BSKCAT",
+    "name": "Basket Cat",
+    "pool": "0x59fef0eafdf053c3646b478694adef50a2cddde59353a490c0c50ddd657299e3",
+    "chart_url": "https://www.geckoterminal.com/robinhood/pools/0x59fef0eafdf053c3646b478694adef50a2cddde59353a490c0c50ddd657299e3"
+   },
+   "their_qty": 1114422304.6488795,
+   "market_price_usd": 2.02232881031875e-06,
+   "price_source": "geckoterminal_1m_candle",
+   "tx_hash": "0xd9f64ec9e9077d307e141321d41c0ceb62936d355079b99353c6e04746ee9afd",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd9f64ec9e9077d307e141321d41c0ceb62936d355079b99353c6e04746ee9afd",
+   "size_usd": 10.0,
+   "qty": 4846877.593794878,
+   "fill_price_usd": 2.042552098421938e-06,
+   "fee_usd": 0.11,
+   "realized_pnl_usd": null,
+   "cash_after_usd": 89.99,
+   "equity_after_usd": 99.792
+  },
+  {
+   "id": "0xc4162383a3-collie-sell",
+   "ts": "2026-10-11T11:37:12+03:00",
+   "source_ts": "2026-10-11T11:36:12+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "sell",
+   "token": {
+    "address": "0x7c698f001c33885eb29bb58ac40343c440e1bcc4",
+    "symbol": "BSKCAT",
+    "name": "Basket Cat",
+    "pool": "0x59fef0eafdf053c3646b478694adef50a2cddde59353a490c0c50ddd657299e3",
+    "chart_url": "https://www.geckoterminal.com/robinhood/pools/0x59fef0eafdf053c3646b478694adef50a2cddde59353a490c0c50ddd657299e3"
+   },
+   "their_qty": 712400433.492,
+   "market_price_usd": 2.02232881031875e-06,
+   "price_source": "geckoterminal_1m_candle",
+   "tx_hash": "0xc4162383a31c577e9653740e5a7b27a70afc5bbbdb27eb802817ac89957426ff",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xc4162383a31c577e9653740e5a7b27a70afc5bbbdb27eb802817ac89957426ff",
+   "size_usd": 6.2033,
+   "qty": 3098392.489541962,
+   "fill_price_usd": 2.0021055222155625e-06,
+   "fraction_closed": 0.6393,
+   "fee_usd": 0.072,
+   "realized_pnl_usd": -0.2677,
+   "cash_after_usd": 96.1213,
+   "equity_after_usd": 99.6573
+  },
+  {
+   "id": "0xc409c6570b-whippet-buy",
+   "ts": "2026-10-11T11:38:23+03:00",
+   "source_ts": "2026-10-11T11:37:23+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "buy",
+   "token": {
+    "address": "0x5ebda74759d564d707221c2b1cd62a14fbe3970a",
+    "symbol": "DIALN",
+    "name": "Dialien",
+    "pool": "0xc428bf5a1d5c655b079ddecb5888fde91590c03b4e57904717f9cb6bf2348f56",
+    "chart_url": "https://www.geckoterminal.com/robinhood/pools/0xc428bf5a1d5c655b079ddecb5888fde91590c03b4e57904717f9cb6bf2348f56"
+   },
+   "their_qty": 119301987.18773018,
+   "market_price_usd": 1.70925800176595e-05,
+   "price_source": "geckoterminal_1m_candle",
+   "tx_hash": "0xc409c6570b823d84323cbbc9fa422fc8970a56d3d0cf40091059942c23a30c79",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xc409c6570b823d84323cbbc9fa422fc8970a56d3d0cf40091059942c23a30c79",
+   "size_usd": 9.9657,
+   "qty": 571498.7187058597,
+   "fill_price_usd": 1.7263505817836096e-05,
+   "fee_usd": 0.1097,
+   "realized_pnl_usd": null,
+   "cash_after_usd": 86.1455,
+   "equity_after_usd": 99.4499
+  },
+  {
+   "id": "0x7d304351c2-whippet-sell",
+   "ts": "2026-10-11T11:39:11+03:00",
+   "source_ts": "2026-10-11T11:38:11+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "sell",
+   "token": {
+    "address": "0x5ebda74759d564d707221c2b1cd62a14fbe3970a",
+    "symbol": "DIALN",
+    "name": "Dialien",
+    "pool": "0xc428bf5a1d5c655b079ddecb5888fde91590c03b4e57904717f9cb6bf2348f56",
+    "chart_url": "https://www.geckoterminal.com/robinhood/pools/0xc428bf5a1d5c655b079ddecb5888fde91590c03b4e57904717f9cb6bf2348f56"
+   },
+   "their_qty": 183777245.00500003,
+   "market_price_usd": 1.63230898841128e-05,
+   "price_source": "geckoterminal_1m_candle",
+   "tx_hash": "0x7d304351c234f2190a77e837b60de323cf1c98ba0911451306cd67086bd3ecc0",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x7d304351c234f2190a77e837b60de323cf1c98ba0911451306cd67086bd3ecc0",
+   "size_usd": 9.2353,
+   "qty": 571498.7187058597,
+   "fill_price_usd": 1.615985898527167e-05,
+   "fraction_closed": 1.0,
+   "fee_usd": 0.1024,
+   "realized_pnl_usd": -0.8427,
+   "cash_after_usd": 95.2785,
+   "equity_after_usd": 98.8145
+  },
+  {
+   "id": "0x24ad713d97-collie-sell",
+   "ts": "2026-10-11T11:47:06+03:00",
+   "source_ts": "2026-10-11T11:46:06+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "sell",
+   "token": {
+    "address": "0x7c698f001c33885eb29bb58ac40343c440e1bcc4",
+    "symbol": "BSKCAT",
+    "name": "Basket Cat",
+    "pool": "0x59fef0eafdf053c3646b478694adef50a2cddde59353a490c0c50ddd657299e3",
+    "chart_url": "https://www.geckoterminal.com/robinhood/pools/0x59fef0eafdf053c3646b478694adef50a2cddde59353a490c0c50ddd657299e3"
+   },
+   "their_qty": 383110664.607,
+   "market_price_usd": 2.97534489744089e-06,
+   "price_source": "geckoterminal_1m_candle",
+   "tx_hash": "0x24ad713d973c57a12be0a68296317dc0540d504a02ce2765729f25015e84a02b",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x24ad713d973c57a12be0a68296317dc0540d504a02ce2765729f25015e84a02b",
+   "size_usd": 4.9081,
+   "qty": 1666235.9398958567,
+   "fill_price_usd": 2.945591448466481e-06,
+   "fraction_closed": 0.953,
+   "fee_usd": 0.0591,
+   "realized_pnl_usd": 1.4078,
+   "cash_after_usd": 100.1275,
+   "equity_after_usd": 100.3722
+  }
+ ],
  "skipped": [
   {
    "ts": "2026-10-11T11:28:04+03:00",
@@ -529,11 +671,66 @@
    "reason": "sell of a position we never copied (bought before the start or skipped)",
    "tx_hash": "0xf8b9dd1be21360ec6d849ebd87b69efd9f6e3455b39f052b84b0f0b94f960fe0",
    "tx_url": "https://robinhoodchain.blockscout.com/tx/0xf8b9dd1be21360ec6d849ebd87b69efd9f6e3455b39f052b84b0f0b94f960fe0"
+  },
+  {
+   "ts": "2026-10-11T11:35:15+03:00",
+   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
+   "label": "Beagle",
+   "side": "sell",
+   "token": {
+    "address": "0x5ebda74759d564d707221c2b1cd62a14fbe3970a",
+    "symbol": "DIALN"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x7b643a81dad1ecbba532680da82e56af225da970196f776f8f5b891f6634d1bf",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x7b643a81dad1ecbba532680da82e56af225da970196f776f8f5b891f6634d1bf"
+  },
+  {
+   "ts": "2026-10-11T11:45:48+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "sell",
+   "token": {
+    "address": "0x5ebda74759d564d707221c2b1cd62a14fbe3970a",
+    "symbol": "DIALN"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x3b53d9118f4b579bdc10841fe7e12d84e3c31fe8f9ff850bbb64b1598d681408",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x3b53d9118f4b579bdc10841fe7e12d84e3c31fe8f9ff850bbb64b1598d681408"
   }
  ],
- "positions": [],
+ "positions": [
+  {
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "token": {
+    "address": "0x7c698f001c33885eb29bb58ac40343c440e1bcc4",
+    "symbol": "BSKCAT",
+    "name": "Basket Cat",
+    "pool": "0x59fef0eafdf053c3646b478694adef50a2cddde59353a490c0c50ddd657299e3",
+    "chart_url": "https://www.geckoterminal.com/robinhood/pools/0x59fef0eafdf053c3646b478694adef50a2cddde59353a490c0c50ddd657299e3"
+   },
+   "qty": 82249.16435705917,
+   "cost_usd": 0.1698648499537505,
+   "opened_at": "2026-10-11T11:37:01+03:00",
+   "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0xd9f64ec9e9077d307e141321d41c0ceb62936d355079b99353c6e04746ee9afd",
+   "avg_price_usd": 2.065247121737737e-06,
+   "last_price_usd": 3.52884222027207e-06,
+   "last_price_at": "2026-10-11T11:50:25+03:00",
+   "price_stale": false,
+   "value_usd": 0.2902,
+   "unrealized_pnl_usd": 0.1203
+  }
+ ],
  "tracked": {
-  "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738": {}
+  "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738": {},
+  "0x305cce99734d69a5ae927695b18c350763629930": {},
+  "0xe2ea9afdf1dbe563311303c605edca754d03a62c": {
+   "0x7c698f001c33885eb29bb58ac40343c440e1bcc4": 18911206.54987955
+  },
+  "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a": {
+   "0x5ebda74759d564d707221c2b1cd62a14fbe3970a": 0.0
+  }
  },
  "balance_history": [
   {
@@ -556,30 +753,77 @@
    "cash": 100.0,
    "positions_value": 0,
    "event": "mark"
+  },
+  {
+   "ts": "2026-10-11T11:37:01+03:00",
+   "equity": 99.792,
+   "cash": 89.99,
+   "positions_value": 9.802,
+   "event": "trade",
+   "trade_id": "0xd9f64ec9e9-collie-buy"
+  },
+  {
+   "ts": "2026-10-11T11:37:12+03:00",
+   "equity": 99.6573,
+   "cash": 96.1213,
+   "positions_value": 3.536,
+   "event": "trade",
+   "trade_id": "0xc4162383a3-collie-sell"
+  },
+  {
+   "ts": "2026-10-11T11:38:23+03:00",
+   "equity": 99.4499,
+   "cash": 86.1455,
+   "positions_value": 13.3044,
+   "event": "trade",
+   "trade_id": "0xc409c6570b-whippet-buy"
+  },
+  {
+   "ts": "2026-10-11T11:39:11+03:00",
+   "equity": 98.8145,
+   "cash": 95.2785,
+   "positions_value": 3.536,
+   "event": "trade",
+   "trade_id": "0x7d304351c2-whippet-sell"
+  },
+  {
+   "ts": "2026-10-11T11:47:06+03:00",
+   "equity": 100.3722,
+   "cash": 100.1275,
+   "positions_value": 0.2447,
+   "event": "trade",
+   "trade_id": "0x24ad713d97-collie-sell"
+  },
+  {
+   "ts": "2026-10-11T11:50:25+03:00",
+   "equity": 100.4177,
+   "cash": 100.1275,
+   "positions_value": 0.2902,
+   "event": "mark"
   }
  ],
  "summary": {
-  "equity_usd": 100.0,
-  "cash_usd": 100.0,
-  "positions_value_usd": 0,
-  "pnl_usd": 0.0,
-  "pnl_pct": 0.0,
-  "realized_pnl_usd": 0,
-  "unrealized_pnl_usd": 0,
-  "trades": 0,
-  "buys": 0,
-  "sells": 0,
-  "wins": 0,
-  "losses": 0,
-  "win_rate": null,
-  "max_drawdown_pct": 0.0,
-  "peak_equity_usd": 100.0,
-  "fees_paid_usd": 0,
-  "open_positions": 0,
-  "win_streak": 0,
-  "skipped": 1,
-  "best_trade_usd": null,
-  "worst_trade_usd": null
+  "equity_usd": 100.4177,
+  "cash_usd": 100.1275,
+  "positions_value_usd": 0.2902,
+  "pnl_usd": 0.4177,
+  "pnl_pct": 0.418,
+  "realized_pnl_usd": 0.2974,
+  "unrealized_pnl_usd": 0.1203,
+  "trades": 5,
+  "buys": 2,
+  "sells": 3,
+  "wins": 1,
+  "losses": 2,
+  "win_rate": 0.3333,
+  "max_drawdown_pct": 1.186,
+  "peak_equity_usd": 100.4177,
+  "fees_paid_usd": 0.4532,
+  "open_positions": 1,
+  "win_streak": 1,
+  "skipped": 3,
+  "best_trade_usd": 1.4078,
+  "worst_trade_usd": -0.8427
  },
  "runs": [],
  "runs_log": [
@@ -661,7 +905,36 @@
      "errors": []
     }
    }
+  },
+  {
+   "at": "2026-10-11T11:50:25+03:00",
+   "kind": "run",
+   "new_swaps": 7,
+   "copied": 5,
+   "skipped": 2,
+   "wallets_failed": [],
+   "notes": [],
+   "sources": {
+    "blockscout": {
+     "ok": true,
+     "calls": 8,
+     "failed_calls": 0,
+     "errors": []
+    },
+    "dexscreener": {
+     "ok": true,
+     "calls": 1,
+     "failed_calls": 0,
+     "errors": []
+    },
+    "geckoterminal": {
+     "ok": true,
+     "calls": 3,
+     "failed_calls": 0,
+     "errors": []
+    }
+   }
   }
  ],
- "cash": 100.0
+ "cash": 100.127502
 }
