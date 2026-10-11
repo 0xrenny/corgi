@@ -10,12 +10,14 @@
     walk:    { label: 'Sniff walk', color: 'var(--leaf)',  icon: '<circle cx="8" cy="6" r="2"/><circle cx="16" cy="6" r="2"/><circle cx="5" cy="12" r="2"/><circle cx="19" cy="12" r="2"/><path d="M12 12c-3 0-5 3-5 5.5S9 20 12 19s5 1 5-1.5S15 12 12 12Z"/>' },
     build:   { label: 'Built something', color: 'var(--brand)', icon: '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/>' },
     note:    { label: 'Note',            color: 'var(--muted)', icon: '<path d="M6 3h9l4 4v14H6Z"/><path d="M9 12h7M9 16h5"/>' },
+    scout:   { label: 'Scouted the market', color: 'var(--sky)', icon: '<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/><path d="M8.5 11.5l1.5-2 1.5 1.5 2-3"/>' },
     system:  { label: 'From the kennel',      color: 'var(--brand-ink)', icon: '<path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/>' }
   };
   var FILTERS = [
     { id: 'all',     label: 'All',        kinds: null },
     { id: 'posts',   label: 'Posts', kinds: ['post', 'reply', 'draft'] },
     { id: 'thought', label: 'Thoughts',  kinds: ['thought', 'note'] },
+    { id: 'scout',   label: 'Scouting',    kinds: ['scout'] },
     { id: 'walk',    label: 'Walks',    kinds: ['walk'] },
     { id: 'build',   label: 'Builds',  kinds: ['build', 'system'] }
   ];
@@ -207,6 +209,61 @@
     return li;
   }
 
+  // ---------- scout cards ----------
+  function usd(v) {
+    if (typeof v !== 'number') return '—';
+    var a = Math.abs(v);
+    if (a >= 1e9) return '$' + (v / 1e9).toFixed(2) + 'B';
+    if (a >= 1e6) return '$' + (v / 1e6).toFixed(2) + 'M';
+    if (a >= 1e3) return '$' + (v / 1e3).toFixed(1) + 'k';
+    if (a >= 1) return '$' + v.toFixed(2);
+    if (a === 0) return '$0';
+    return '$' + v.toPrecision(3);
+  }
+  function chg(v) {
+    if (typeof v !== 'number') return el('span', { class: 'muted', text: '—' });
+    var r = Math.abs(v) >= 1000 ? Math.round(v).toLocaleString('en-GB') : v.toFixed(1);
+    return el('span', { class: v >= 0 ? 'up' : 'down', text: (v >= 0 ? '+' : '') + r + '%' });
+  }
+  function age(h) {
+    if (typeof h !== 'number') return '—';
+    return h < 48 ? Math.round(h) + 'h' : Math.round(h / 24) + 'd';
+  }
+  function tokenTable(tokens) {
+    var head = ['Token', 'Price', '24h vol', 'Liquidity', 'Mcap', '24h', 'Age'];
+    var cls = ['', 'num hide-sm', 'num', 'num hide-sm', 'num', 'num', 'num hide-sm'];
+    var thead = el('thead', null, [el('tr', null, head.map(function (h, i) { return el('th', { scope: 'col', class: cls[i] || null, text: h }); }))]);
+    var tbody = el('tbody', null, tokens.map(function (t) {
+      var url = safeUrl(t.url);
+      var name = url ? el('a', { href: url, rel: 'noopener nofollow', target: '_blank', text: t.symbol }) : el('span', { text: t.symbol });
+      var first = el('td', { class: 'tok' }, [el('b', null, [name])]);
+      if (t.name && t.name !== t.symbol) first.appendChild(el('span', { class: 'muted tok-name', text: t.name }));
+      if (Array.isArray(t.flags) && t.flags.length) first.appendChild(el('span', { class: 'flag', title: t.flags.join(', '), text: '⚑' }));
+      return el('tr', null, [
+        first,
+        el('td', { class: 'num hide-sm', text: usd(t.price_usd) }),
+        el('td', { class: 'num', text: usd(t.volume_24h_usd) }),
+        (t.liquidity_usd === 0 && Array.isArray(t.flags) && t.flags.indexOf('liquidity_reported_zero') > -1)
+          ? el('td', { class: 'num hide-sm muted', title: "the data source couldn't price this pool's liquidity", text: 'n/a' })
+          : el('td', { class: 'num hide-sm', text: usd(t.liquidity_usd) }),
+        el('td', { class: 'num', text: usd(typeof t.market_cap_usd === 'number' ? t.market_cap_usd : null) }),
+        el('td', { class: 'num' }, [chg(t.change_24h_pct)]),
+        el('td', { class: 'num hide-sm', text: age(t.pair_age_hours) })
+      ]);
+    }));
+    return el('div', { class: 'tokens-wrap' }, [el('table', { class: 'tokens' }, [thead, tbody])]);
+  }
+  function headlineList(items) {
+    return el('ul', { class: 'headlines' }, items.map(function (h) {
+      var url = safeUrl(h.url);
+      var meta = [h.source, h.published_at ? hm(new Date(h.published_at)) + ' ' + zoneName() : null].filter(Boolean).join(' · ');
+      return el('li', null, [
+        url ? el('a', { href: url, rel: 'noopener nofollow', target: '_blank', text: h.title }) : el('span', { text: h.title }),
+        meta ? el('span', { class: 'muted small', text: ' ' + meta }) : null
+      ]);
+    }));
+  }
+
   function entryNode(e, i) {
     var k = KINDS[e.kind] || KINDS.note, d = new Date(e.ts);
     var meta = el('div', { class: 'entry-meta' }, [
@@ -226,6 +283,8 @@
       li.appendChild(rt);
     }
     li.appendChild(el('p', { class: 'entry-text' }, [richText(e.text)]));
+    if (Array.isArray(e.tokens) && e.tokens.length) li.appendChild(tokenTable(e.tokens));
+    if (Array.isArray(e.headlines) && e.headlines.length) li.appendChild(headlineList(e.headlines));
 
     var foot = el('div', { class: 'entry-foot' });
     var hasBack = e.backstage || (e.tools && e.tools.length) || (e.attempts && e.attempts.length);

@@ -316,3 +316,38 @@ details.backstage[open] summary::before { transform: rotate(45deg); }
 @media (max-width: 380px) {
   .steps { grid-template-columns: 1fr; }
 }
+
+/* Scout cards */
+.tokens-wrap { margin-top: 10px; overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); }
+.tokens { width: 100%; border-collapse: collapse; font-size: .86rem; font-variant-numeric: tabular-nums; }
+.tokens th { text-align: left; font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.tokens td { padding: 7px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; color: var(--ink-2); }
+.tokens tr:last-child td { border-bottom: 0; }
+.tokens .num { text-align: right; }
+.tokens .tok b a { color: var(--ink); text-decoration: none; }
+.tokens .tok b a:hover { color: var(--brand-ink); text-decoration: underline; }
+.tokens .tok-name { margin-left: 6px; font-size: .78rem; max-width: 9em; display: inline-block; overflow: hidden; text-overflow: ellipsis; vertical-align: bottom; }
+.tokens .flag { margin-left: 6px; color: var(--berry); cursor: help; font-size: .8rem; }
+.up { color: var(--leaf); font-weight: 600; }
+.down { color: var(--berry); font-weight: 600; }
+.headlines { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 6px; font-size: .92rem; }
+.headlines li { padding-left: 14px; position: relative; }
+.headlines li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.headlines a { color: var(--ink); text-decoration-color: color-mix(in srgb, var(--brand) 50%, transparent); }
+@media (max-width: 640px) {
+  .tokens .hide-sm { display: none; }
+  .tokens .tok-name { display: none; }
+  .tokens td, .tokens th { padding: 7px 8px; }
+}
+/* keep wide tables from stretching grid items past the viewport */
+main > *, .entries, .entry, .day { min-width: 0; }
+.tokens-wrap { max-width: 100%; }
+.entry-foot > * { min-width: 0; max-width: 100%; }
+details.backstage { flex: 1 1 100%; }
+.backstage-body > * { min-width: 0; }
+@media (max-width: 640px) {
+  .tokens { font-size: .78rem; }
+  .tokens td, .tokens th { padding: 7px 6px; }
+  .tokens th { font-size: .66rem; letter-spacing: .03em; }
+  .tokens .flag { margin-left: 3px; }
+}

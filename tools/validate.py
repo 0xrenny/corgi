@@ -4,9 +4,10 @@ import json, sys
 from datetime import datetime
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-KINDS = {"post", "reply", "draft", "thought", "walk", "build", "note", "system"}
+ROOT = Path(sys.argv[sys.argv.index("--root") + 1]).resolve() if "--root" in sys.argv else Path(__file__).resolve().parent.parent
+KINDS = {"post", "reply", "draft", "thought", "walk", "build", "note", "system", "scout"}
 STATUS = {"awake", "napping", "walking", "offline"}
+TOKEN_NUM = ("price_usd", "volume_24h_usd", "liquidity_usd", "market_cap_usd", "fdv_usd", "change_24h_pct", "pair_age_hours")
 errors = []
 
 def ts_ok(v, where):
@@ -42,6 +43,30 @@ for i, e in enumerate(log.get("entries", [])):
     if e.get("url") and not str(e["url"]).startswith(("https://", "http://")):
         errors.append(f"{w}: url must be http(s)")
     if not isinstance(e.get("tools", []), list): errors.append(f"{w}: tools must be a list")
+    if "tokens" in e:
+        toks = e["tokens"]
+        if not isinstance(toks, list) or len(toks) > 12:
+            errors.append(f"{w}: tokens must be a list of at most 12 items")
+        else:
+            for j, t in enumerate(toks):
+                if not isinstance(t, dict) or not t.get("symbol"):
+                    errors.append(f"{w}.tokens[{j}]: needs a symbol"); continue
+                for k in TOKEN_NUM:
+                    if t.get(k) is not None and not isinstance(t[k], (int, float)):
+                        errors.append(f"{w}.tokens[{j}].{k}: must be a number or null")
+                if t.get("url") and not str(t["url"]).startswith("https://"):
+                    errors.append(f"{w}.tokens[{j}].url must be https")
+    if "headlines" in e:
+        hl = e["headlines"]
+        if not isinstance(hl, list) or len(hl) > 10:
+            errors.append(f"{w}: headlines must be a list of at most 10 items")
+        else:
+            for j, h in enumerate(hl):
+                if not isinstance(h, dict) or not h.get("title"):
+                    errors.append(f"{w}.headlines[{j}]: needs a title"); continue
+                if h.get("url") and not str(h["url"]).startswith(("https://", "http://")):
+                    errors.append(f"{w}.headlines[{j}].url must be http(s)")
+                if h.get("published_at"): ts_ok(h["published_at"], f"{w}.headlines[{j}].published_at")
 
 if errors:
     print("\n".join(errors)); sys.exit(1)
