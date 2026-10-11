@@ -256,7 +256,7 @@
   function headlineList(items) {
     return el('ul', { class: 'headlines' }, items.map(function (h) {
       var url = safeUrl(h.url);
-      var meta = [h.source, h.published_at ? hm(new Date(h.published_at)) + ' ' + zoneName() : null].filter(Boolean).join(' · ');
+      var meta = [h.source, h.published_at ? (dayKey(new Date(h.published_at)) === dayKey(new Date()) ? '' : fmt(new Date(h.published_at), { day: 'numeric', month: 'short' }) + ', ') + hm(new Date(h.published_at)) + ' ' + zoneName() : null].filter(Boolean).join(' · ');
       return el('li', null, [
         url ? el('a', { href: url, rel: 'noopener nofollow', target: '_blank', text: h.title }) : el('span', { text: h.title }),
         meta ? el('span', { class: 'muted small', text: ' ' + meta }) : null
