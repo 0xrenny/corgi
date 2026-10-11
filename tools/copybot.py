@@ -196,8 +196,30 @@ def price_at(rows, t, width):
     return best[1], ("candle" if ts - best[0] < width else "last_close_before")
 
 
-def spot_prices(tokens):
-    out = {}
+def pool_prices(pools):
+    """{token: pool} -> {token: price} from that exact pool (the same pool trades are priced from).
+    GeckoTerminal's /simple/token_price can aggregate in junk pools and return glitched prices."""
+    out, by_pool = {}, {}
+    for t, pl in pools.items():
+        if pl:
+            by_pool.setdefault(pl.lower(), set()).add(t.lower())
+    pls = sorted(by_pool)
+    for i in range(0, len(pls), 30):
+        d = gt(f"/networks/{NET}/pools/multi/{','.join(pls[i:i+30])}")
+        for it in (d or {}).get("data") or []:
+            at, rel = it.get("attributes") or {}, it.get("relationships") or {}
+            pl = (at.get("address") or "").lower()
+            for side in ("base", "quote"):
+                tid = ((((rel.get(f"{side}_token") or {}).get("data")) or {}).get("id") or "").split("_")[-1].lower()
+                px = num(at.get(f"{side}_token_price_usd"))
+                if tid in by_pool.get(pl, ()) and px:
+                    out[tid] = px
+    return out
+
+
+def spot_prices(tokens, pools=None):
+    out = pool_prices(pools) if pools else {}
+    tokens = [t for t in tokens if t.lower() not in out]
     for i in range(0, len(tokens), 30):
         d = gt(f"/simple/networks/{NET}/token_price/{','.join(tokens[i:i+30])}")
         for k, v in ((((d or {}).get("data") or {}).get("attributes") or {}).get("token_prices") or {}).items():
@@ -624,7 +646,8 @@ def run(a):
         run_info["copied"] += 1
 
     # 2. mark open positions to market
-    marks = spot_prices(sorted({k[1] for k in positions})) if positions else {}
+    marks = spot_prices(sorted({k[1] for k in positions}),
+                        {k[1]: (p.get("token") or {}).get("pool") for k, p in positions.items()}) if positions else {}
     for (wa, ta), p in positions.items():
         if ta in marks:
             p["last_price_usd"], p["last_price_at"], p["price_stale"] = marks[ta], iso(t_run), False

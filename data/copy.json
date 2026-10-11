@@ -2976,13 +2976,6 @@
    "cash": 0.4911,
    "positions_value": 87.3351,
    "event": "mark"
-  },
-  {
-   "ts": "2026-10-11T21:15:44+03:00",
-   "equity": 0.837,
-   "cash": 0.4911,
-   "positions_value": 0.3459,
-   "event": "mark"
   }
  ],
  "summary": {
@@ -3184,7 +3177,8 @@
    "skipped": 53,
    "wallets_failed": [],
    "notes": [
-    "0x4d2e5c83: too fresh, left for the next run"
+    "0x4d2e5c83: too fresh, left for the next run",
+    "mark discarded: GeckoTerminal /simple/token_price returned glitched prices (BSKCAT 2.2e-10 vs ~9.4e-6 in its own pool); marks now use each position's own pool"
    ],
    "sources": {
     "blockscout": {
