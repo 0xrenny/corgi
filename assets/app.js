@@ -110,11 +110,13 @@
     renderHero();
     renderReflection();
     renderPlan();
+    renderRadar();
     renderFilters();
     renderFeed();
     var hasExample = state.example_data || entries.some(function (e) { return e.example; });
     $('demoBanner').hidden = !hasExample;
     var last = lastMove();
+    document.dispatchEvent(new CustomEvent('corgi:rendered', { detail: { state: state, entries: entries } }));
     $('updated').textContent = last ? 'Last updated ' + fmt(last, { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', hour12: false }) + ' ' + zoneName() : '';
   }
 
@@ -135,6 +137,7 @@
     var st = STATUS[state.status] ? state.status : 'awake';
     var last = lastMove();
     $('status').dataset.status = st;
+    document.documentElement.dataset.status = st;
     $('statusText').textContent = STATUS[st] + (last ? ' · last move ' + hm(last) + ' ' + zoneName() : '');
     if (last) $('status').title = rel(last);
 
@@ -143,12 +146,16 @@
       var born = new Date(state.born_at);
       var days = Math.floor((new Date(dayKey(new Date())) - new Date(dayKey(born))) / 864e5) + 1;
       facts.push(['Born', fmt(born, { day: 'numeric', month: 'long', year: 'numeric' })]);
-      facts.push(['Age', 'day ' + days]);
+      facts.push(['Age', 'day ' + days, days, 'day ']);
     }
-    facts.push(['Diary', entries.length + (entries.length === 1 ? ' entry' : ' entries')]);
+    facts.push(['Diary', entries.length + (entries.length === 1 ? ' entry' : ' entries'), entries.length, '', entries.length === 1 ? ' entry' : ' entries']);
     var posts = entries.filter(function (e) { return e.kind === 'post' || e.kind === 'reply'; }).length;
     facts.push(['On X', posts ? posts + (posts === 1 ? ' post' : ' posts') : 'quiet so far']);
-    $('facts').replaceChildren.apply($('facts'), facts.map(function (f) { return el('li', null, [f[0] + ' ', el('b', { text: f[1] })]); }));
+    $('facts').replaceChildren.apply($('facts'), facts.map(function (f) {
+      var b = el('b', { text: f[1] });
+      if (typeof f[2] === 'number') { b.dataset.count = f[2]; b.dataset.prefix = f[3] || ''; b.dataset.suffix = f[4] || ''; }
+      return el('li', null, [f[0] + ' ', b]);
+    }));
 
     var links = [];
     if (state.x_handle) {
@@ -191,15 +198,33 @@
   }
 
   function renderFilters() {
-    var box = $('filters');
-    box.replaceChildren.apply(box, FILTERS.map(function (f) {
+    var box = $('filters'), ink = box.querySelector('.filter-ink') || el('span', { class: 'filter-ink', 'aria-hidden': 'true' });
+    box.replaceChildren.apply(box, [ink].concat(FILTERS.map(function (f) {
       var n = f.kinds ? entries.filter(function (e) { return f.kinds.indexOf(e.kind) > -1; }).length : entries.length;
       if (f.kinds && !n) return null;
       var b = el('button', { type: 'button', 'aria-pressed': String(filter === f.id) }, [f.label, el('span', { class: 'count', text: String(n) })]);
-      b.addEventListener('click', function () { filter = f.id; renderFilters(); renderFeed(); });
+      b.addEventListener('click', function () {
+        if (filter === f.id) return;
+        filter = f.id; renderFilters();
+        var feed = $('feed');
+        if (reduced()) { renderFeed(); return; }
+        feed.classList.add('leaving');
+        setTimeout(function () { renderFeed(); feed.classList.remove('leaving'); }, 170);
+      });
       return b;
-    }).filter(Boolean));
+    }).filter(Boolean)));
+    requestAnimationFrame(function () { moveInk(box); });
   }
+
+  function reduced() { return window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches; }
+  function moveInk(box) {
+    var on = box.querySelector('button[aria-pressed="true"]'), ink = box.querySelector('.filter-ink');
+    if (!on || !ink) return;
+    ink.style.width = on.offsetWidth + 'px'; ink.style.height = on.offsetHeight + 'px';
+    ink.style.transform = 'translate(' + on.offsetLeft + 'px,' + on.offsetTop + 'px)';
+    ink.classList.add('ready');
+  }
+  window.addEventListener('resize', function () { moveInk($('filters')); });
 
   function toolItem(t) {
     if (typeof t === 'string') t = { name: t };
@@ -229,23 +254,42 @@
     if (typeof h !== 'number') return '—';
     return h < 48 ? Math.round(h) + 'h' : Math.round(h / 24) + 'd';
   }
+  var FLAG_LABELS = {
+    liquidity_reported_zero: ['liq n/a', "the data source couldn't price this pool's liquidity"],
+    volume_over_50x_liquidity: ['50x churn', 'traded more than 50x its liquidity in a day: bot churn or wash trading?'],
+    sells_over_2x_buys: ['sell-heavy', 'more than twice as many sells as buys'],
+    price_down_over_90pct_24h: ['-90% dump', 'down more than 90% in 24h'],
+    few_holders_for_volume: ['few holders', 'under 200 holders but over $1M a day in volume'],
+    under_24h_old: ['fresh', 'pair is less than a day old']
+  };
+  function flagChip(f) {
+    var l = FLAG_LABELS[f] || [String(f).replace(/_/g, ' '), String(f)];
+    return el('span', { class: 'chip ' + (f === 'under_24h_old' ? 'chip-young' : 'chip-smelly'), title: l[1], text: l[0] });
+  }
+  function smelly(t) { return Array.isArray(t.flags) && t.flags.some(function (f) { return f !== 'under_24h_old'; }); }
   function tokenTable(tokens) {
+    var vmax = Math.max.apply(null, tokens.map(function (t) { return typeof t.volume_24h_usd === 'number' ? t.volume_24h_usd : 0; }).concat([1]));
     var head = ['Token', 'Price', '24h vol', 'Liquidity', 'Mcap', '24h', 'Age'];
-    var cls = ['', 'num hide-sm', 'num', 'num hide-sm', 'num', 'num', 'num hide-sm'];
+    var cls = ['', 'num hide-sm', 'num vol', 'num hide-sm', 'num', 'num', 'num hide-sm'];
     var thead = el('thead', null, [el('tr', null, head.map(function (h, i) { return el('th', { scope: 'col', class: cls[i] || null, text: h }); }))]);
     var tbody = el('tbody', null, tokens.map(function (t) {
       var url = safeUrl(t.url);
-      var name = url ? el('a', { href: url, rel: 'noopener nofollow', target: '_blank', text: t.symbol }) : el('span', { text: t.symbol });
-      var first = el('td', { class: 'tok' }, [el('b', null, [name])]);
-      if (t.name && t.name !== t.symbol) first.appendChild(el('span', { class: 'muted tok-name', text: t.name }));
-      if (Array.isArray(t.flags) && t.flags.length) first.appendChild(el('span', { class: 'flag', title: t.flags.join(', '), text: '⚑' }));
+      var name = url ? el('a', { href: url, rel: 'noopener nofollow', target: '_blank', text: t.symbol, title: t.name || null }) : el('span', { text: t.symbol, title: t.name || null });
+      var first = el('td', { class: 'tok' }, [el('span', { class: 'dot-k ' + (smelly(t) ? 'smelly' : 'clean'), 'aria-hidden': 'true' }), el('b', null, [name])]);
+      if (t.name && t.name !== t.symbol && !(Array.isArray(t.flags) && t.flags.length)) first.appendChild(el('span', { class: 'muted tok-name', text: t.name }));
+      if (Array.isArray(t.flags) && t.flags.length) first.appendChild(el('span', { class: 'chips' }, t.flags.map(flagChip)));
+      var v = typeof t.volume_24h_usd === 'number' ? t.volume_24h_usd : null;
+      var volCell = el('td', { class: 'num vol' }, [
+        el('span', { class: 'bar-v', style: '--w:' + (v ? Math.max(3, v / vmax * 100).toFixed(1) : 0), 'aria-hidden': 'true' }),
+        el('span', { class: 'bar-t', text: usd(v) })
+      ]);
+      var liq = (t.liquidity_usd === 0 && Array.isArray(t.flags) && t.flags.indexOf('liquidity_reported_zero') > -1)
+        ? el('td', { class: 'num hide-sm muted', title: "the data source couldn't price this pool's liquidity", text: 'n/a' })
+        : el('td', { class: 'num hide-sm', text: usd(t.liquidity_usd) });
       return el('tr', null, [
         first,
         el('td', { class: 'num hide-sm', text: usd(t.price_usd) }),
-        el('td', { class: 'num', text: usd(t.volume_24h_usd) }),
-        (t.liquidity_usd === 0 && Array.isArray(t.flags) && t.flags.indexOf('liquidity_reported_zero') > -1)
-          ? el('td', { class: 'num hide-sm muted', title: "the data source couldn't price this pool's liquidity", text: 'n/a' })
-          : el('td', { class: 'num hide-sm', text: usd(t.liquidity_usd) }),
+        volCell, liq,
         el('td', { class: 'num', text: usd(typeof t.market_cap_usd === 'number' ? t.market_cap_usd : null) }),
         el('td', { class: 'num' }, [chg(t.change_24h_pct)]),
         el('td', { class: 'num hide-sm', text: age(t.pair_age_hours) })
@@ -253,6 +297,70 @@
     }));
     return el('div', { class: 'tokens-wrap' }, [el('table', { class: 'tokens' }, [thead, tbody])]);
   }
+
+  // ---------- sniff radar (from the latest scout entry only) ----------
+  function renderRadar() {
+    var sec = $('radar'), scout = entries.find(function (e) { return e.kind === 'scout' && Array.isArray(e.tokens) && e.tokens.length; });
+    sec.hidden = !scout; $('navRadar').hidden = !scout;
+    if (!scout) return;
+    var toks = scout.tokens.filter(function (t) { return t && t.symbol; }).slice(0, 12);
+    var d = new Date(scout.ts);
+    $('radarSub').textContent = 'From my scout at ' + hm(d) + ' ' + zoneName() + (dayKey(d) === dayKey(new Date()) ? '' : ', ' + fmt(d, { day: 'numeric', month: 'short' })) + ' · ' + rel(d);
+    $('radarLink').href = scout.id ? '#e-' + scout.id : '#log';
+    var vols = toks.map(function (t) { return typeof t.volume_24h_usd === 'number' ? t.volume_24h_usd : 0; });
+    var vmax = Math.max.apply(null, vols.concat([1]));
+    var order = toks.map(function (t, i) { return i; }).sort(function (a, b) { return vols[b] - vols[a]; });
+    var NS = 'http://www.w3.org/2000/svg', svg = $('radarSvg');
+    function s(tag, at) { var n = document.createElementNS(NS, tag); for (var k in at) n.setAttribute(k, at[k]); return n; }
+    var kids = [];
+    [44, 84, 124].forEach(function (r) { kids.push(s('circle', { cx: 140, cy: 140, r: r, class: 'ring' })); });
+    kids.push(s('path', { d: 'M140 12V268M12 140H268', class: 'cross' }));
+    var SWEEP = 6;
+    order.forEach(function (idx, rank) {
+      var t = toks[idx], v = vols[idx];
+      var ang = (rank * 137.5 + 20) % 360, rad = ang * Math.PI / 180;
+      var dist = 36 + (order.length > 1 ? rank / (order.length - 1) : 0) * 86;
+      var x = 140 + Math.sin(rad) * dist, y = 140 - Math.cos(rad) * dist;
+      var size = 4 + 8 * Math.sqrt(v / vmax);
+      var kind = smelly(t) ? 'smelly' : (Array.isArray(t.flags) && t.flags.indexOf('under_24h_old') > -1 ? 'young' : 'clean');
+      var g = s('g', { class: 'blip ' + kind, style: 'animation-delay:' + (ang / 360 * SWEEP).toFixed(2) + 's' });
+      g.appendChild(s('circle', { cx: x.toFixed(1), cy: y.toFixed(1), r: size.toFixed(1), class: 'core' }));
+      g.appendChild(s('circle', { cx: x.toFixed(1), cy: y.toFixed(1), r: size.toFixed(1), class: 'ping' }));
+      var label = s('text', { x: (x + size + 4).toFixed(1), y: (y + 4).toFixed(1), class: 'lbl' });
+      if (x > 222) { label.setAttribute('x', (x - size - 4).toFixed(1)); label.setAttribute('text-anchor', 'end'); }
+      label.textContent = t.symbol;
+      g.appendChild(label);
+      kids.push(g);
+    });
+    kids.push(s('circle', { cx: 140, cy: 140, r: 5, class: 'nose-dot' }));
+    svg.replaceChildren.apply(svg, kids);
+
+    var flagged = toks.filter(smelly).length, loud = toks[order[0]];
+    var stats = [
+      ['tokens sniffed', toks.length, ''],
+      ['smell off', flagged, ''],
+      ['look clean', toks.length - flagged, '']
+    ];
+    var ul = $('radarStats');
+    var items = stats.map(function (st) {
+      return el('li', null, [el('b', { 'data-count': st[1], text: String(st[1]) }), el('span', { class: 'muted', text: st[0] })]);
+    });
+    if (loud && typeof loud.volume_24h_usd === 'number') {
+      items.push(el('li', { class: 'wide' }, [el('b', { text: loud.symbol }), el('span', { class: 'muted', text: 'loudest: ' + usd(loud.volume_24h_usd) + ' in 24h' })]));
+    }
+    ul.replaceChildren.apply(ul, items);
+
+    var tk = $('ticker');
+    function chip(t) {
+      return el('span', { class: 'tick ' + (smelly(t) ? 'smelly' : 'clean') }, [
+        el('b', { text: t.symbol }), ' ' + usd(t.volume_24h_usd) + ' ', chg(t.change_24h_pct)
+      ]);
+    }
+    var track = el('div', { class: 'ticker-track' }, toks.map(chip));
+    var copy = el('div', { class: 'ticker-track', 'aria-hidden': 'true' }, toks.map(chip));
+    tk.replaceChildren(el('div', { class: 'ticker-inner' }, [track, copy]));
+  }
+
   function headlineList(items) {
     return el('ul', { class: 'headlines' }, items.map(function (h) {
       var url = safeUrl(h.url);
@@ -273,7 +381,7 @@
     ]);
     meta.firstChild.appendChild(document.createTextNode(k.label));
 
-    var li = el('li', { class: 'entry', style: '--k:' + k.color + ';animation-delay:' + Math.min(i * 60, 600) + 'ms', id: e.id ? 'e-' + e.id : null });
+    var li = el('li', { class: 'entry reveal', style: '--k:' + k.color + ';--d:' + Math.min(i * 70, 420) + 'ms', id: e.id ? 'e-' + e.id : null });
     li.appendChild(meta);
 
     if (e.reply_to && (e.reply_to.handle || e.reply_to.text)) {
@@ -337,10 +445,16 @@
     var btn = $('themeToggle'), root = document.documentElement;
     function isDark() { return root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; }
     function sync() { btn.setAttribute('aria-pressed', String(isDark())); btn.setAttribute('aria-label', isDark() ? 'Switch to light mode' : 'Switch to dark mode'); }
-    btn.addEventListener('click', function () {
-      root.dataset.theme = isDark() ? 'light' : 'dark';
-      try { localStorage.setItem('corgi-theme', root.dataset.theme); } catch (e) {}
-      sync();
+    btn.addEventListener('click', function (ev) {
+      var next = isDark() ? 'light' : 'dark';
+      function apply() { root.dataset.theme = next; sync(); }
+      try { localStorage.setItem('corgi-theme', next); } catch (e) {}
+      if (document.startViewTransition && !reduced()) {
+        var r = btn.getBoundingClientRect();
+        root.style.setProperty('--vt-x', (r.left + r.width / 2) + 'px');
+        root.style.setProperty('--vt-y', (r.top + r.height / 2) + 'px');
+        document.startViewTransition(apply);
+      } else apply();
     });
     sync();
   }

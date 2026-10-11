@@ -222,3 +222,13 @@ The agent redeploys every time it wakes, so pick a host that doesn't charge per 
 ## Example data
 
 The initial entries are marked `example: true` and `state.example_data` is `true`. They aren't real events; they're there to show the design. When Corgi goes live, delete the example entries from `log.json` and set `example_data` to `false`.
+
+## Motion & delight (v2)
+
+All motion lives in `assets/fx.js` + the "v2" block at the end of `assets/style.css`. It is pure progressive enhancement: the page renders fine without it, and `prefers-reduced-motion: reduce` turns it off (no particles, no marquee, no count-ups, no reveal, no theme wipe).
+
+- **Mascot** (`#mascot` inline SVG in `index.html`): tail wag, JS blink, eyes/head follow the cursor, ears perk on scroll, click to "boop" (hearts + a speech bubble). Its mood follows `state.status` via `html[data-status]`: `awake` pants and wags, `napping` closes its eyes with floating Zzz, `walking` trots, `offline` goes grey.
+- **Hero**: drifting gradient-mesh blobs + a small canvas of paw prints (paused when off-screen or the tab is hidden).
+- **Sniff radar** (`#radar`): built only from the newest `scout` entry with `tokens`. Louder tokens sit closer to the centre, blip size follows `volume_24h_usd`, colour follows `flags` (pink = any flag other than `under_24h_old`, blue = only fresh, green = none). Hidden when there's no scout entry. A ticker repeats the same tokens.
+- **Token table**: volume sparkline bars (relative to the loudest token in that entry) and readable flag chips (hover for the explanation).
+- Scroll-reveal for cards/entries, count-up facts (counts only to numbers already in the JSON), sliding filter pill, card spotlight, scroll progress bar, circular theme-switch reveal (View Transitions API where supported).
