@@ -41,7 +41,7 @@
    }
   }
  },
- "updated_at": "2026-10-11T11:26:24+03:00",
+ "updated_at": "2026-10-11T11:33:49+03:00",
  "wallets": [
   {
    "address": "0x305cce99734d69a5ae927695b18c350763629930",
@@ -93,7 +93,7 @@
     "wins": 0,
     "losses": 0,
     "last_trade_at": null,
-    "open_value_usd": 0.0,
+    "open_value_usd": 0,
     "pnl_curve": [
      0.0
     ]
@@ -153,7 +153,7 @@
     "wins": 0,
     "losses": 0,
     "last_trade_at": null,
-    "open_value_usd": 0.0,
+    "open_value_usd": 0,
     "pnl_curve": [
      0.0
     ]
@@ -213,14 +213,14 @@
     "wins": 0,
     "losses": 0,
     "last_trade_at": null,
-    "open_value_usd": 0.0,
+    "open_value_usd": 0,
     "pnl_curve": [
      0.0
     ]
    },
    "cursor": {
-    "last_block": null,
-    "last_ts": null
+    "last_block": 85694154,
+    "last_ts": "2026-10-11T11:28:04+03:00"
    }
   },
   {
@@ -273,7 +273,7 @@
     "wins": 0,
     "losses": 0,
     "last_trade_at": null,
-    "open_value_usd": 0.0,
+    "open_value_usd": 0,
     "pnl_curve": [
      0.0
     ]
@@ -333,7 +333,7 @@
     "wins": 0,
     "losses": 0,
     "last_trade_at": null,
-    "open_value_usd": 0.0,
+    "open_value_usd": 0,
     "pnl_curve": [
      0.0
     ]
@@ -384,7 +384,7 @@
     "wins": 0,
     "losses": 0,
     "last_trade_at": null,
-    "open_value_usd": 0.0,
+    "open_value_usd": 0,
     "pnl_curve": [
      0.0
     ]
@@ -444,7 +444,7 @@
     "wins": 0,
     "losses": 0,
     "last_trade_at": null,
-    "open_value_usd": 0.0,
+    "open_value_usd": 0,
     "pnl_curve": [
      0.0
     ]
@@ -504,7 +504,7 @@
     "wins": 0,
     "losses": 0,
     "last_trade_at": null,
-    "open_value_usd": 0.0,
+    "open_value_usd": 0,
     "pnl_curve": [
      0.0
     ]
@@ -516,9 +516,25 @@
   }
  ],
  "trades": [],
- "skipped": [],
+ "skipped": [
+  {
+   "ts": "2026-10-11T11:28:04+03:00",
+   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
+   "label": "Shiba",
+   "side": "sell",
+   "token": {
+    "address": "0x5ebda74759d564d707221c2b1cd62a14fbe3970a",
+    "symbol": "DIALN"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xf8b9dd1be21360ec6d849ebd87b69efd9f6e3455b39f052b84b0f0b94f960fe0",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xf8b9dd1be21360ec6d849ebd87b69efd9f6e3455b39f052b84b0f0b94f960fe0"
+  }
+ ],
  "positions": [],
- "tracked": {},
+ "tracked": {
+  "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738": {}
+ },
  "balance_history": [
   {
    "ts": "2026-10-11T11:26:24+03:00",
@@ -526,6 +542,13 @@
    "cash": 100.0,
    "positions_value": 0.0,
    "event": "start"
+  },
+  {
+   "ts": "2026-10-11T11:33:49+03:00",
+   "equity": 100.0,
+   "cash": 100.0,
+   "positions_value": 0,
+   "event": "mark"
   }
  ],
  "summary": {
@@ -547,7 +570,7 @@
   "fees_paid_usd": 0,
   "open_positions": 0,
   "win_streak": 0,
-  "skipped": 0,
+  "skipped": 1,
   "best_trade_usd": null,
   "worst_trade_usd": null
  },
@@ -576,6 +599,36 @@
      "errors": []
     }
    }
+  },
+  {
+   "at": "2026-10-11T11:33:49+03:00",
+   "kind": "run",
+   "new_swaps": 1,
+   "copied": 0,
+   "skipped": 1,
+   "wallets_failed": [],
+   "notes": [],
+   "sources": {
+    "blockscout": {
+     "ok": true,
+     "calls": 8,
+     "failed_calls": 0,
+     "errors": []
+    },
+    "dexscreener": {
+     "ok": true,
+     "calls": 1,
+     "failed_calls": 0,
+     "errors": []
+    },
+    "geckoterminal": {
+     "ok": true,
+     "calls": 1,
+     "failed_calls": 0,
+     "errors": []
+    }
+   }
   }
- ]
+ ],
+ "cash": 100.0
 }
