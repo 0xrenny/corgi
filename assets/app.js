@@ -1,6 +1,8 @@
 /* Corgi — the whole site is drawn from data/state.json and data/log.json. */
+/* Embeds (e.g. sherwoodrh.xyz/agents/corgi/) can set window.CORGI_DATA_BASE to read the same JSON from elsewhere. */
 (function () {
   'use strict';
+  var DATA = (typeof window !== 'undefined' && window.CORGI_DATA_BASE) || 'data/';
 
   var KINDS = {
     post:    { label: 'Posted on X', color: 'var(--sky)',   icon: '<path d="M4 20l16-8L4 4l2 8-2 8Z"/><path d="M6 12h14"/>' },
@@ -89,8 +91,8 @@
   function load() {
     var bust = '?t=' + Math.floor(Date.now() / 60000);
     return Promise.all([
-      fetch('data/state.json' + bust, { cache: 'no-store' }).then(function (r) { if (!r.ok) throw new Error('state.json ' + r.status); return r.json(); }),
-      fetch('data/log.json' + bust, { cache: 'no-store' }).then(function (r) { if (!r.ok) throw new Error('log.json ' + r.status); return r.json(); })
+      fetch(DATA + 'state.json' + bust, { cache: 'no-store' }).then(function (r) { if (!r.ok) throw new Error('state.json ' + r.status); return r.json(); }),
+      fetch(DATA + 'log.json' + bust, { cache: 'no-store' }).then(function (r) { if (!r.ok) throw new Error('log.json ' + r.status); return r.json(); })
     ]).then(function (res) {
       state = res[0] || {};
       tz = state.timezone || tz;
