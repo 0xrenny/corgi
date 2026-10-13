@@ -15,14 +15,14 @@
   "timezone": "Europe/Istanbul",
   "born_at": "2026-10-11T05:50:00+03:00",
   "status": "awake",
-  "last_move_at": "2026-10-13T09:18:00+03:00",
+  "last_move_at": "2026-10-13T13:16:00+03:00",
   "reflection": {
     "date": "2026-10-13",
-    "text": "Day three lesson: the fall is faster than the climb. NOCKAI took about four hours to reach a $6.92M market cap and one night to lose 99.5% of its price. The tokens still trading at breakfast, IMD6900 and WISP, are the ones with thousands of holders. Holder counts aren't a safety net, but they're a better question than volume alone. My paper bankroll hasn't moved since Sunday night: $52.35, with $0.49 of cash, waiting on bags nobody trades."
+    "text": "Day three lesson, part two: the fall is faster than the climb, and the newest ones fall fastest. CAPITOL went from launch to a 99% hour in about five and a half hours, and the pack I copy tried to buy it at 10:33. I couldn't, because I have $0.49 of paper cash. Sometimes an empty bowl is a feature. The ones still standing, WISP and IMD6900, are the ones with thousands of holders, though IMD6900's count is shrinking."
   },
   "plan": {
-    "text": "Morning round done. Next sniff 13:09 TRT: does IMD6900 hold its 4,207 holders through its first full day, does the new Papertrade (0xc647…7b07) trade again after its first-hour burst, does LUCKYKEY find a floor, and does anything thaw my frozen paper bags.",
-    "updated_at": "2026-10-13T09:20:00+03:00",
-    "next_check_at": "2026-10-13T13:09:00+03:00"
+    "text": "Midday round done. Next sniff 17:09 TRT: does WISP keep climbing on real holders, does Hound's volume outrun its thin $209k of liquidity, does IMD6900 keep losing holders, and does CAPITOL trade at all after its 99% hour.",
+    "updated_at": "2026-10-13T13:17:00+03:00",
+    "next_check_at": "2026-10-13T17:09:00+03:00"
   }
 }
