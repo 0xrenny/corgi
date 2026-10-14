@@ -41,7 +41,7 @@
    }
   }
  },
- "updated_at": "2026-10-13T21:26:02+03:00",
+ "updated_at": "2026-10-14T09:16:43+03:00",
  "wallets": [
   {
    "address": "0x305cce99734d69a5ae927695b18c350763629930",
@@ -101,8 +101,8 @@
     ]
    },
    "cursor": {
-    "last_block": 87654814,
-    "last_ts": "2026-10-13T19:28:29+03:00"
+    "last_block": 88086463,
+    "last_ts": "2026-10-14T07:37:57+03:00"
    }
   },
   {
@@ -165,8 +165,8 @@
     ]
    },
    "cursor": {
-    "last_block": 87673806,
-    "last_ts": "2026-10-13T20:00:28+03:00"
+    "last_block": 88134034,
+    "last_ts": "2026-10-14T08:58:15+03:00"
    }
   },
   {
@@ -225,8 +225,8 @@
     ]
    },
    "cursor": {
-    "last_block": 87481062,
-    "last_ts": "2026-10-13T14:36:48+03:00"
+    "last_block": 88136767,
+    "last_ts": "2026-10-14T09:02:52+03:00"
    }
   },
   {
@@ -288,8 +288,8 @@
     ]
    },
    "cursor": {
-    "last_block": 87283871,
-    "last_ts": "2026-10-13T08:56:39+03:00"
+    "last_block": 88144119,
+    "last_ts": "2026-10-14T09:15:14+03:00"
    }
   },
   {
@@ -351,8 +351,8 @@
     ]
    },
    "cursor": {
-    "last_block": 87276075,
-    "last_ts": "2026-10-13T08:43:08+03:00"
+    "last_block": 88144654,
+    "last_ts": "2026-10-14T09:16:09+03:00"
    }
   },
   {
@@ -403,8 +403,8 @@
     ]
    },
    "cursor": {
-    "last_block": 87196467,
-    "last_ts": "2026-10-13T06:25:05+03:00"
+    "last_block": 88116807,
+    "last_ts": "2026-10-14T08:29:10+03:00"
    }
   },
   {
@@ -464,8 +464,8 @@
     ]
    },
    "cursor": {
-    "last_block": 87294458,
-    "last_ts": "2026-10-13T09:14:49+03:00"
+    "last_block": 88121362,
+    "last_ts": "2026-10-14T08:36:51+03:00"
    }
   },
   {
@@ -1580,968 +1580,6 @@
   }
  ],
  "skipped": [
-  {
-   "ts": "2026-10-12T06:40:27+03:00",
-   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
-   "label": "Shiba",
-   "side": "sell",
-   "token": {
-    "address": "0xd58387abfe21c72203cbed48e4409bbb34571326",
-    "symbol": "RBCAT"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x49524a15a3debb2e92a2671e1ff7ec513026794211bfd4825e289589b9e4cfab",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x49524a15a3debb2e92a2671e1ff7ec513026794211bfd4825e289589b9e4cfab"
-  },
-  {
-   "ts": "2026-10-12T06:51:05+03:00",
-   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
-   "label": "Husky",
-   "side": "buy",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xe3328af469e6d733b7ce076682f26a9a8f4fe5a39c944dab15208de84046ae27",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xe3328af469e6d733b7ce076682f26a9a8f4fe5a39c944dab15208de84046ae27"
-  },
-  {
-   "ts": "2026-10-12T06:51:10+03:00",
-   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
-   "label": "Husky",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x64890db1a94bb1a0e8aea15a5f33ef51e5de7e03b63004f5af33f69210ce6252",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x64890db1a94bb1a0e8aea15a5f33ef51e5de7e03b63004f5af33f69210ce6252"
-  },
-  {
-   "ts": "2026-10-12T06:54:36+03:00",
-   "wallet": "0xef0bb67423b1c370e2477d535dc28ba728a73c04",
-   "label": "Dachshund",
-   "side": "buy",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xcbfe52bb65df467394a0cc9969d60b21c4ff36a3360556a65a97b33ffc65325b",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xcbfe52bb65df467394a0cc9969d60b21c4ff36a3360556a65a97b33ffc65325b"
-  },
-  {
-   "ts": "2026-10-12T06:56:20+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x1a64c621db665223d67427ab781358723d6f9e2d9139b1784ab5e1eb7579a09f",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x1a64c621db665223d67427ab781358723d6f9e2d9139b1784ab5e1eb7579a09f"
-  },
-  {
-   "ts": "2026-10-12T06:56:50+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "sell",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xb7c52ba0b6426f0a9c8d569f2ebb30b7b7809763964cdfdb9a877bd5a2be6f42",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xb7c52ba0b6426f0a9c8d569f2ebb30b7b7809763964cdfdb9a877bd5a2be6f42"
-  },
-  {
-   "ts": "2026-10-12T06:56:57+03:00",
-   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
-   "label": "Collie",
-   "side": "buy",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xaa122df76f0711ceebd59e080ff1456398c212c031262e315b283113960feecc",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xaa122df76f0711ceebd59e080ff1456398c212c031262e315b283113960feecc"
-  },
-  {
-   "ts": "2026-10-12T06:56:57+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "sell",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xce83c8de094d4c7d7a48f93f85577fe8aba15cc57979d0787a4402cfde708142",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xce83c8de094d4c7d7a48f93f85577fe8aba15cc57979d0787a4402cfde708142"
-  },
-  {
-   "ts": "2026-10-12T06:57:06+03:00",
-   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
-   "label": "Husky",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x34aef405520f2c800fa276101a85189ebe44d3396a6658adacca506738785386",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x34aef405520f2c800fa276101a85189ebe44d3396a6658adacca506738785386"
-  },
-  {
-   "ts": "2026-10-12T06:58:27+03:00",
-   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
-   "label": "Collie",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x361eb091b7f3cb53f86dee7aecf55a5b82b1d4bac9024314bf68931a2c22e046",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x361eb091b7f3cb53f86dee7aecf55a5b82b1d4bac9024314bf68931a2c22e046"
-  },
-  {
-   "ts": "2026-10-12T07:00:00+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "sell",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xbc8e6c8a44a010b61c4249408b4c105cd0c9f3c92fdf0562ad615488454adb08",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xbc8e6c8a44a010b61c4249408b4c105cd0c9f3c92fdf0562ad615488454adb08"
-  },
-  {
-   "ts": "2026-10-12T07:00:35+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "sell",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xdf77688ac35dcb0a222a1fa71304fe72c7c528c420f6d41791bbf73c0a4930be",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xdf77688ac35dcb0a222a1fa71304fe72c7c528c420f6d41791bbf73c0a4930be"
-  },
-  {
-   "ts": "2026-10-12T07:01:23+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "sell",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x0570155519eb1c1830590fdb419ca8abade66e90d65cd727b17b5ddb6c2381dc",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x0570155519eb1c1830590fdb419ca8abade66e90d65cd727b17b5ddb6c2381dc"
-  },
-  {
-   "ts": "2026-10-12T07:01:25+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "sell",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x6fa90f71c2a9b40cb3beddc3c594c3acfdc35da5ad0adef46835912942936b1a",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x6fa90f71c2a9b40cb3beddc3c594c3acfdc35da5ad0adef46835912942936b1a"
-  },
-  {
-   "ts": "2026-10-12T07:02:15+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x436dd9bc21f5b90d48f6d0c5f9a6ff80ced4cc8e20d040446e418670d6f35869",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x436dd9bc21f5b90d48f6d0c5f9a6ff80ced4cc8e20d040446e418670d6f35869"
-  },
-  {
-   "ts": "2026-10-12T07:05:02+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x190eeab74bd85c2f54ed45e2723cc3e7afa396bd60d822b3815aca727834cbfc",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x190eeab74bd85c2f54ed45e2723cc3e7afa396bd60d822b3815aca727834cbfc"
-  },
-  {
-   "ts": "2026-10-12T07:05:02+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x59937f6fdcc736f80a77b77d208e4b8430d7d3fa5a9f97415f7c045254af6fec",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x59937f6fdcc736f80a77b77d208e4b8430d7d3fa5a9f97415f7c045254af6fec"
-  },
-  {
-   "ts": "2026-10-12T07:08:48+03:00",
-   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
-   "label": "Collie",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x50a743f01f9c460b9e5dd1574b80bb799e5220aaec900d4a61ce6f00c9baad07",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x50a743f01f9c460b9e5dd1574b80bb799e5220aaec900d4a61ce6f00c9baad07"
-  },
-  {
-   "ts": "2026-10-12T07:15:02+03:00",
-   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
-   "label": "Shiba",
-   "side": "buy",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xb38a6c498c628f00d0901ae58f2a6ed4198780325f3b0daa3da59be95643a66a",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xb38a6c498c628f00d0901ae58f2a6ed4198780325f3b0daa3da59be95643a66a"
-  },
-  {
-   "ts": "2026-10-12T07:16:03+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "buy",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xd147e659cb75a8fe78c8d8a0e88c5b37a257ca4a44edb9ded01b93f079b83be2",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd147e659cb75a8fe78c8d8a0e88c5b37a257ca4a44edb9ded01b93f079b83be2"
-  },
-  {
-   "ts": "2026-10-12T07:27:40+03:00",
-   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
-   "label": "Shiba",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x30c6156f4d082dcb95c94a197eb40c4657804860e3871f0e458e0cc92ed930a0",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x30c6156f4d082dcb95c94a197eb40c4657804860e3871f0e458e0cc92ed930a0"
-  },
-  {
-   "ts": "2026-10-12T07:34:11+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x5e393631e58168451c648a69f23893c95802e60f",
-    "symbol": "MOTION"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xd7784d5bb53f449eb71f46b31f1c2197ea61ccce6c5b5789032a3c93ca236ce4",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd7784d5bb53f449eb71f46b31f1c2197ea61ccce6c5b5789032a3c93ca236ce4"
-  },
-  {
-   "ts": "2026-10-12T07:34:17+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x5e393631e58168451c648a69f23893c95802e60f",
-    "symbol": "MOTION"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xec8f717ce4cce737c45eb440c41098a5c8237d2e1da14f625573a22a461fceba",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xec8f717ce4cce737c45eb440c41098a5c8237d2e1da14f625573a22a461fceba"
-  },
-  {
-   "ts": "2026-10-12T07:34:27+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x5e393631e58168451c648a69f23893c95802e60f",
-    "symbol": "MOTION"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xf4b7fee02544aaa7963c3984c17c339a8308a4758718325c9a38568cc3496076",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xf4b7fee02544aaa7963c3984c17c339a8308a4758718325c9a38568cc3496076"
-  },
-  {
-   "ts": "2026-10-12T07:37:47+03:00",
-   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
-   "label": "Collie",
-   "side": "buy",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x635fc470b177036bed87479fac8c1af27a266f9a77f14b510e0c0b31d88863cd",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x635fc470b177036bed87479fac8c1af27a266f9a77f14b510e0c0b31d88863cd"
-  },
-  {
-   "ts": "2026-10-12T07:42:09+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xfe8f266c6c9e20f644a4932a7f81322fa29e9256c4f0834fa97f8ce78323f164",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xfe8f266c6c9e20f644a4932a7f81322fa29e9256c4f0834fa97f8ce78323f164"
-  },
-  {
-   "ts": "2026-10-12T07:42:54+03:00",
-   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
-   "label": "Collie",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xd7fce16130a8e59d5e8670e35cbddadb66e4a0ddf7cd656d503b9b50951e99c2",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd7fce16130a8e59d5e8670e35cbddadb66e4a0ddf7cd656d503b9b50951e99c2"
-  },
-  {
-   "ts": "2026-10-12T07:43:30+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xc97d2596ab8f47cf7246b966ff4babd566de7feccdc0df17d14e0ae967a0173c",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xc97d2596ab8f47cf7246b966ff4babd566de7feccdc0df17d14e0ae967a0173c"
-  },
-  {
-   "ts": "2026-10-12T07:49:50+03:00",
-   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
-   "label": "Collie",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xdb8c6021e853f5110dc2b24ae5d1e5f3de5744049e04332903fa8a59432f55d5",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xdb8c6021e853f5110dc2b24ae5d1e5f3de5744049e04332903fa8a59432f55d5"
-  },
-  {
-   "ts": "2026-10-12T08:01:47+03:00",
-   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
-   "label": "Collie",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x3bfc9a7050fa205aa2659df07261de2c8d0e7085765e366554d673c1a65883a8",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x3bfc9a7050fa205aa2659df07261de2c8d0e7085765e366554d673c1a65883a8"
-  },
-  {
-   "ts": "2026-10-12T08:20:10+03:00",
-   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
-   "label": "Shiba",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xdf12c50a782bd5abb8b0cebf3c22d345d0baf3a3adb7754499f14588a7f777a1",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xdf12c50a782bd5abb8b0cebf3c22d345d0baf3a3adb7754499f14588a7f777a1"
-  },
-  {
-   "ts": "2026-10-12T08:25:49+03:00",
-   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
-   "label": "Husky",
-   "side": "buy",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x9ec2c6e38d1c9ac190872122c627d9091d81d3404f7dd4d76b1a8abf5ed96664",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x9ec2c6e38d1c9ac190872122c627d9091d81d3404f7dd4d76b1a8abf5ed96664"
-  },
-  {
-   "ts": "2026-10-12T08:37:00+03:00",
-   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
-   "label": "Husky",
-   "side": "buy",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x5a853f10646d1fbdadcea48999693096cecb1d28326e5a5ed88c85f4d176fef0",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x5a853f10646d1fbdadcea48999693096cecb1d28326e5a5ed88c85f4d176fef0"
-  },
-  {
-   "ts": "2026-10-12T08:37:26+03:00",
-   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
-   "label": "Husky",
-   "side": "sell",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xaeadb08a619e5f799cede7dfdfe71835c6eeab2045353b06776c982ae1c498b6",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xaeadb08a619e5f799cede7dfdfe71835c6eeab2045353b06776c982ae1c498b6"
-  },
-  {
-   "ts": "2026-10-12T08:42:38+03:00",
-   "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
-   "label": "Poodle",
-   "side": "buy",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x9845a159672d9b8e1ee6505243174bd7ba8b1f8fe0c7a06753d38f0ab0906db9",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x9845a159672d9b8e1ee6505243174bd7ba8b1f8fe0c7a06753d38f0ab0906db9"
-  },
-  {
-   "ts": "2026-10-12T08:42:51+03:00",
-   "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
-   "label": "Poodle",
-   "side": "sell",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x01e97d21ee3228068ce0d3ba39f492fe610d18df411079a89d35adf2bc7e31e8",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x01e97d21ee3228068ce0d3ba39f492fe610d18df411079a89d35adf2bc7e31e8"
-  },
-  {
-   "ts": "2026-10-12T08:44:29+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xd4bea2540144f43f467592cfb692a9eb702e3c25121fe01ed10f7acebc217838",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd4bea2540144f43f467592cfb692a9eb702e3c25121fe01ed10f7acebc217838"
-  },
-  {
-   "ts": "2026-10-12T08:50:47+03:00",
-   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
-   "label": "Husky",
-   "side": "sell",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x723bbe082003db07c6bc2f4d531cfd8a118f94f713a802cc52307c6bbd76ae17",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x723bbe082003db07c6bc2f4d531cfd8a118f94f713a802cc52307c6bbd76ae17"
-  },
-  {
-   "ts": "2026-10-12T08:53:46+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x840cf366f414553728d0f29d8d0b9a0dc2df546c05f059b1acd0cde26b13e1eb",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x840cf366f414553728d0f29d8d0b9a0dc2df546c05f059b1acd0cde26b13e1eb"
-  },
-  {
-   "ts": "2026-10-12T08:54:25+03:00",
-   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
-   "label": "Husky",
-   "side": "buy",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xa73ae3ee9d4d51c9fc10a538587da591f4f1b8711103b8a3ff7fd0ca8d2d2b03",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xa73ae3ee9d4d51c9fc10a538587da591f4f1b8711103b8a3ff7fd0ca8d2d2b03"
-  },
-  {
-   "ts": "2026-10-12T09:01:01+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "buy",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x7adbaa79325cc2eb51bf71bfb51cc9ea5742fdf1a8f40d2ff62321be1fbc126d",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x7adbaa79325cc2eb51bf71bfb51cc9ea5742fdf1a8f40d2ff62321be1fbc126d"
-  },
-  {
-   "ts": "2026-10-12T09:04:19+03:00",
-   "wallet": "0xef0bb67423b1c370e2477d535dc28ba728a73c04",
-   "label": "Dachshund",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x375d42e902a3d2511a496fb2b359e68f3d47f935d87684bf75641dae721ecc26",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x375d42e902a3d2511a496fb2b359e68f3d47f935d87684bf75641dae721ecc26"
-  },
-  {
-   "ts": "2026-10-12T09:06:35+03:00",
-   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
-   "label": "Whippet",
-   "side": "buy",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x23fba40483a4a036df5c19cc4409dc21b33da4b743c6e18b882bd6c4aa9e87d3",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x23fba40483a4a036df5c19cc4409dc21b33da4b743c6e18b882bd6c4aa9e87d3"
-  },
-  {
-   "ts": "2026-10-12T09:10:53+03:00",
-   "wallet": "0xef0bb67423b1c370e2477d535dc28ba728a73c04",
-   "label": "Dachshund",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x57dcc9ef40206fe21c98998502789d6393c8f3dad7a38123b0d9a57d29f6b0b1",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x57dcc9ef40206fe21c98998502789d6393c8f3dad7a38123b0d9a57d29f6b0b1"
-  },
-  {
-   "ts": "2026-10-12T09:14:07+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "buy",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x7573fd59396e120f4696050b98eb17aafaa7ccca2c5a6a6bb5bd66068e703db0",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x7573fd59396e120f4696050b98eb17aafaa7ccca2c5a6a6bb5bd66068e703db0"
-  },
-  {
-   "ts": "2026-10-12T09:14:42+03:00",
-   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
-   "label": "Husky",
-   "side": "buy",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xbd71a73c4d930d973a9e737e60bd78ad0595f3ed4a1bfcf08a5b651f003854d4",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xbd71a73c4d930d973a9e737e60bd78ad0595f3ed4a1bfcf08a5b651f003854d4"
-  },
-  {
-   "ts": "2026-10-12T09:15:53+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "sell",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x4e6681cda73a72a1a3920a6158af5e5e415bc13641f348bdd0981359efbb1a42",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x4e6681cda73a72a1a3920a6158af5e5e415bc13641f348bdd0981359efbb1a42"
-  },
-  {
-   "ts": "2026-10-12T09:16:00+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "buy",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xbb3a69d2cd157a562989cf4f14467f4d2d84236acd39bda42b5a141f5d03610d",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xbb3a69d2cd157a562989cf4f14467f4d2d84236acd39bda42b5a141f5d03610d"
-  },
-  {
-   "ts": "2026-10-12T09:22:17+03:00",
-   "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
-   "label": "Poodle",
-   "side": "buy",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x4192515d102c451d4d1b7e88e6756a0289afad716207050b8fb505bbd9a70dfb",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x4192515d102c451d4d1b7e88e6756a0289afad716207050b8fb505bbd9a70dfb"
-  },
-  {
-   "ts": "2026-10-12T09:26:30+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "buy",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xc8dbceac696a192713f1c3d237d301081069d82bc649c13b9888a5bb192c7608",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xc8dbceac696a192713f1c3d237d301081069d82bc649c13b9888a5bb192c7608"
-  },
-  {
-   "ts": "2026-10-12T09:32:13+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "sell",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xd76445715804505acade1173bf7b0b1b6e4fbb8218fbd1472429f32314fadd70",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd76445715804505acade1173bf7b0b1b6e4fbb8218fbd1472429f32314fadd70"
-  },
-  {
-   "ts": "2026-10-12T09:36:20+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "sell",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x0614106278ecc5c842ba47a11358e2d18bd16267d5a96fdc4cd850372a7b4b4a",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x0614106278ecc5c842ba47a11358e2d18bd16267d5a96fdc4cd850372a7b4b4a"
-  },
-  {
-   "ts": "2026-10-12T09:37:20+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "buy",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xb96cace7c6dcfe1d25ed8442e5a89d89feb9262a24e305832e5e0a29c8e6e72e",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xb96cace7c6dcfe1d25ed8442e5a89d89feb9262a24e305832e5e0a29c8e6e72e"
-  },
-  {
-   "ts": "2026-10-12T09:38:06+03:00",
-   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
-   "label": "Husky",
-   "side": "sell",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x11d0b7f98ed28d1df966836fb49e89190d96ad81b8f4566f717db63e24bbe90c",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x11d0b7f98ed28d1df966836fb49e89190d96ad81b8f4566f717db63e24bbe90c"
-  },
-  {
-   "ts": "2026-10-12T09:41:57+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x5e393631e58168451c648a69f23893c95802e60f",
-    "symbol": "MOTION"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xde327cc7282ad02701e09a4c0c7506b5ca143ae3682709c659573f630ac56ced",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xde327cc7282ad02701e09a4c0c7506b5ca143ae3682709c659573f630ac56ced"
-  },
-  {
-   "ts": "2026-10-12T09:43:37+03:00",
-   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
-   "label": "Whippet",
-   "side": "buy",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xa68a8de4679bb39fc8d90600bf395f528f3e5cab6eaa5f0a135aa669573d9b6c",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xa68a8de4679bb39fc8d90600bf395f528f3e5cab6eaa5f0a135aa669573d9b6c"
-  },
-  {
-   "ts": "2026-10-12T09:53:04+03:00",
-   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
-   "label": "Whippet",
-   "side": "buy",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x6b235e4f5dae4541f1ffa97a810060eab09680d34d6479473bcd4d1df4da6f71",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x6b235e4f5dae4541f1ffa97a810060eab09680d34d6479473bcd4d1df4da6f71"
-  },
-  {
-   "ts": "2026-10-12T09:54:35+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x7c5695377f05a3f89459cf3c4c2247953efa6e2bbf15d852d3721e00e7de21ee",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x7c5695377f05a3f89459cf3c4c2247953efa6e2bbf15d852d3721e00e7de21ee"
-  },
-  {
-   "ts": "2026-10-12T10:00:33+03:00",
-   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
-   "label": "Husky",
-   "side": "sell",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x76416e4d5cf6e5ea69157ddf65decb8b092130982d88aefa1be30b5a5b9bd4d5",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x76416e4d5cf6e5ea69157ddf65decb8b092130982d88aefa1be30b5a5b9bd4d5"
-  },
-  {
-   "ts": "2026-10-12T10:03:04+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x891b387ebcb93ed042fb10c94d98c484d394b447",
-    "symbol": "SI"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xe4d126adc9c501af7ce976020447b1a29ea009341b435ccc0f89b33de882541e",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xe4d126adc9c501af7ce976020447b1a29ea009341b435ccc0f89b33de882541e"
-  },
-  {
-   "ts": "2026-10-12T10:04:11+03:00",
-   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
-   "label": "Shiba",
-   "side": "buy",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xc4a7590ea342c97500740273afbc364ac735f7063771c01991d8f044af2c45a6",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xc4a7590ea342c97500740273afbc364ac735f7063771c01991d8f044af2c45a6"
-  },
-  {
-   "ts": "2026-10-12T10:06:44+03:00",
-   "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
-   "label": "Poodle",
-   "side": "sell",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x923ec78eedc29e4e6f289aef089e284ad37051add8bb95010fc4d590deb70e9b",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x923ec78eedc29e4e6f289aef089e284ad37051add8bb95010fc4d590deb70e9b"
-  },
-  {
-   "ts": "2026-10-12T10:06:52+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x891b387ebcb93ed042fb10c94d98c484d394b447",
-    "symbol": "SI"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xfd9218f74893a4ff08e828ce39eff2115e15a255329d187c4f613a438f503401",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xfd9218f74893a4ff08e828ce39eff2115e15a255329d187c4f613a438f503401"
-  },
-  {
-   "ts": "2026-10-12T10:06:52+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x891b387ebcb93ed042fb10c94d98c484d394b447",
-    "symbol": "SI"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x534436ceaff1737d17ab3c4229ebd6d2f5055b220478b19c4693934e5d38d45e",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x534436ceaff1737d17ab3c4229ebd6d2f5055b220478b19c4693934e5d38d45e"
-  },
-  {
-   "ts": "2026-10-12T10:13:58+03:00",
-   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
-   "label": "Whippet",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xd360f38bc64504359b72bc0b961ae41115369ed8f8909c892800ef3ca5664da9",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd360f38bc64504359b72bc0b961ae41115369ed8f8909c892800ef3ca5664da9"
-  },
-  {
-   "ts": "2026-10-12T10:15:39+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xbd452c30edc3d1a7054ca23f8c27ad622e77ad0001bd50c483e031a012e6622d",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xbd452c30edc3d1a7054ca23f8c27ad622e77ad0001bd50c483e031a012e6622d"
-  },
-  {
-   "ts": "2026-10-12T10:16:28+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "sell",
-   "token": {
-    "address": "0x891b387ebcb93ed042fb10c94d98c484d394b447",
-    "symbol": "SI"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x62ea90ed13a5c195e700b845e368415034089f8f878f1d15084afb6e802b71ee",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x62ea90ed13a5c195e700b845e368415034089f8f878f1d15084afb6e802b71ee"
-  },
-  {
-   "ts": "2026-10-12T10:21:59+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x891b387ebcb93ed042fb10c94d98c484d394b447",
-    "symbol": "SI"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0x6641e87322413b7e46b3f07ecb69317c0ebeef05a7ec65ce231cac852d0a9e9a",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x6641e87322413b7e46b3f07ecb69317c0ebeef05a7ec65ce231cac852d0a9e9a"
-  },
-  {
-   "ts": "2026-10-12T10:22:27+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "buy",
-   "token": {
-    "address": "0x3467a1ac6020009d674aa55c933152a953acb447",
-    "symbol": "SI"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xe6b0bbaed4eb1012332e61a1b5d51d4f70060663a1a1e0a07fb2edf9a8b86a7f",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xe6b0bbaed4eb1012332e61a1b5d51d4f70060663a1a1e0a07fb2edf9a8b86a7f"
-  },
-  {
-   "ts": "2026-10-12T10:22:37+03:00",
-   "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
-   "label": "Basenji",
-   "side": "sell",
-   "token": {
-    "address": "0x891b387ebcb93ed042fb10c94d98c484d394b447",
-    "symbol": "SI"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x32ed4d349a86fa6098a6ec03db5624cab15ca87ced6327ee3371d70f5d6a5062",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x32ed4d349a86fa6098a6ec03db5624cab15ca87ced6327ee3371d70f5d6a5062"
-  },
-  {
-   "ts": "2026-10-12T10:26:43+03:00",
-   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
-   "label": "Beagle",
-   "side": "sell",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0x83bef263f4749e21dc17e2521054d8399887b7e2509cd256289793ee62e2dfb1",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x83bef263f4749e21dc17e2521054d8399887b7e2509cd256289793ee62e2dfb1"
-  },
-  {
-   "ts": "2026-10-12T10:30:48+03:00",
-   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
-   "label": "Whippet",
-   "side": "sell",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xb5960f6d7488bfc4444e6c3e0c388011b4da9d038b19d2db26bfdf4904cb47f7",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xb5960f6d7488bfc4444e6c3e0c388011b4da9d038b19d2db26bfdf4904cb47f7"
-  },
-  {
-   "ts": "2026-10-12T10:34:05+03:00",
-   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
-   "label": "Whippet",
-   "side": "buy",
-   "token": {
-    "address": "0x27ac3e9ff321326cabd2095013a6e23041e1eecd",
-    "symbol": "EQVTA"
-   },
-   "reason": "not enough paper cash",
-   "tx_hash": "0xf2dcdbae6f5f10c33243a742ce16a78e93b3b3a3361270f8ea9cf95d4d0bd84b",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xf2dcdbae6f5f10c33243a742ce16a78e93b3b3a3361270f8ea9cf95d4d0bd84b"
-  },
-  {
-   "ts": "2026-10-12T10:38:47+03:00",
-   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
-   "label": "Husky",
-   "side": "sell",
-   "token": {
-    "address": "0x049e53a8f2fdf15c49eb22cd9ef28c4580599705",
-    "symbol": "BTIGR"
-   },
-   "reason": "sell of a position we never copied (bought before the start or skipped)",
-   "tx_hash": "0xcfba1cafad452221bfb5303b5b594f0755798c9f04e5959606d82ef3450d080f",
-   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xcfba1cafad452221bfb5303b5b594f0755798c9f04e5959606d82ef3450d080f"
-  },
   {
    "ts": "2026-10-12T10:39:12+03:00",
    "wallet": "0xf38ec57459ed2969932c6e61dc6e67a644008f7d",
@@ -6779,6 +5817,968 @@
    "reason": "not enough paper cash",
    "tx_hash": "0xf5e203f5f5ddae75a615c170492509f2e4350c363cabf271acd37c7d20f819d0",
    "tx_url": "https://robinhoodchain.blockscout.com/tx/0xf5e203f5f5ddae75a615c170492509f2e4350c363cabf271acd37c7d20f819d0"
+  },
+  {
+   "ts": "2026-10-13T23:30:48+03:00",
+   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
+   "label": "Beagle",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xb3604f0a9e40ebed1a0381c2a1ee94dc388c7373a380ad373b3c16e73532c7c9",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xb3604f0a9e40ebed1a0381c2a1ee94dc388c7373a380ad373b3c16e73532c7c9"
+  },
+  {
+   "ts": "2026-10-13T23:31:09+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x25c2418eab3294f0f50a570fcb3b6d02ca29c2e9cd1c4159d1e758c4f851b4b6",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x25c2418eab3294f0f50a570fcb3b6d02ca29c2e9cd1c4159d1e758c4f851b4b6"
+  },
+  {
+   "ts": "2026-10-13T23:31:09+03:00",
+   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
+   "label": "Shiba",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x25c2418eab3294f0f50a570fcb3b6d02ca29c2e9cd1c4159d1e758c4f851b4b6",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x25c2418eab3294f0f50a570fcb3b6d02ca29c2e9cd1c4159d1e758c4f851b4b6"
+  },
+  {
+   "ts": "2026-10-13T23:31:09+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x25c2418eab3294f0f50a570fcb3b6d02ca29c2e9cd1c4159d1e758c4f851b4b6",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x25c2418eab3294f0f50a570fcb3b6d02ca29c2e9cd1c4159d1e758c4f851b4b6"
+  },
+  {
+   "ts": "2026-10-13T23:31:09+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x25c2418eab3294f0f50a570fcb3b6d02ca29c2e9cd1c4159d1e758c4f851b4b6",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x25c2418eab3294f0f50a570fcb3b6d02ca29c2e9cd1c4159d1e758c4f851b4b6"
+  },
+  {
+   "ts": "2026-10-13T23:45:23+03:00",
+   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
+   "label": "Beagle",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xc7bea823ef94412bcb698bf16e7683ea807e7b53ee9c3a294aa6eadef0623f47",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xc7bea823ef94412bcb698bf16e7683ea807e7b53ee9c3a294aa6eadef0623f47"
+  },
+  {
+   "ts": "2026-10-13T23:46:46+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xd9e43b470f3ef071dc67d6a0d455ec6d85e2af3d23d940f8a7cfa03f8f8b7d4f",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd9e43b470f3ef071dc67d6a0d455ec6d85e2af3d23d940f8a7cfa03f8f8b7d4f"
+  },
+  {
+   "ts": "2026-10-13T23:46:46+03:00",
+   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
+   "label": "Shiba",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xd9e43b470f3ef071dc67d6a0d455ec6d85e2af3d23d940f8a7cfa03f8f8b7d4f",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd9e43b470f3ef071dc67d6a0d455ec6d85e2af3d23d940f8a7cfa03f8f8b7d4f"
+  },
+  {
+   "ts": "2026-10-13T23:46:46+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xd9e43b470f3ef071dc67d6a0d455ec6d85e2af3d23d940f8a7cfa03f8f8b7d4f",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd9e43b470f3ef071dc67d6a0d455ec6d85e2af3d23d940f8a7cfa03f8f8b7d4f"
+  },
+  {
+   "ts": "2026-10-13T23:48:12+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x56907ec1324c5433a92ce8ffb9f5e31558070ec34f7961e615cd7902529526cf",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x56907ec1324c5433a92ce8ffb9f5e31558070ec34f7961e615cd7902529526cf"
+  },
+  {
+   "ts": "2026-10-13T23:59:05+03:00",
+   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
+   "label": "Shiba",
+   "side": "buy",
+   "token": {
+    "address": "0xdc960518998bf3b50970f7b89b2353994557371f",
+    "symbol": "GMOTH"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xb36cead42325e39b706c2afa98560bc402c04d4dc53babb0a2e0ab31b33291b6",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xb36cead42325e39b706c2afa98560bc402c04d4dc53babb0a2e0ab31b33291b6"
+  },
+  {
+   "ts": "2026-10-14T00:14:16+03:00",
+   "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
+   "label": "Poodle",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x5215de68878c440e12b012ff9bffe92795f0cafdd3e1b96570c3165a90f3b6ed",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x5215de68878c440e12b012ff9bffe92795f0cafdd3e1b96570c3165a90f3b6ed"
+  },
+  {
+   "ts": "2026-10-14T00:15:24+03:00",
+   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
+   "label": "Shiba",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xb4c6c97a46b810bd55bf29e435d2ca3636dcbe2416302655f69ae05c90423d67",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xb4c6c97a46b810bd55bf29e435d2ca3636dcbe2416302655f69ae05c90423d67"
+  },
+  {
+   "ts": "2026-10-14T00:19:46+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "buy",
+   "token": {
+    "address": "0xdc960518998bf3b50970f7b89b2353994557371f",
+    "symbol": "GMOTH"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x6117156d3b1c8edbc068b6250af7045eb6ac2ef3ef73591dbe2f9b7641175d6e",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x6117156d3b1c8edbc068b6250af7045eb6ac2ef3ef73591dbe2f9b7641175d6e"
+  },
+  {
+   "ts": "2026-10-14T00:27:16+03:00",
+   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
+   "label": "Beagle",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x43f2df606ac82af3647b895e87b6d5aa75e056df9ca1111440fea151710581c0",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x43f2df606ac82af3647b895e87b6d5aa75e056df9ca1111440fea151710581c0"
+  },
+  {
+   "ts": "2026-10-14T00:27:16+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x43f2df606ac82af3647b895e87b6d5aa75e056df9ca1111440fea151710581c0",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x43f2df606ac82af3647b895e87b6d5aa75e056df9ca1111440fea151710581c0"
+  },
+  {
+   "ts": "2026-10-14T00:27:16+03:00",
+   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
+   "label": "Shiba",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x43f2df606ac82af3647b895e87b6d5aa75e056df9ca1111440fea151710581c0",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x43f2df606ac82af3647b895e87b6d5aa75e056df9ca1111440fea151710581c0"
+  },
+  {
+   "ts": "2026-10-14T00:27:16+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x43f2df606ac82af3647b895e87b6d5aa75e056df9ca1111440fea151710581c0",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x43f2df606ac82af3647b895e87b6d5aa75e056df9ca1111440fea151710581c0"
+  },
+  {
+   "ts": "2026-10-14T00:27:16+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x43f2df606ac82af3647b895e87b6d5aa75e056df9ca1111440fea151710581c0",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x43f2df606ac82af3647b895e87b6d5aa75e056df9ca1111440fea151710581c0"
+  },
+  {
+   "ts": "2026-10-14T00:34:28+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "sell",
+   "token": {
+    "address": "0xdc960518998bf3b50970f7b89b2353994557371f",
+    "symbol": "GMOTH"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x3107f6fb99982d2e49118ebb7b5adf381f9a6b5dfa4080853f2ac64abd545183",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x3107f6fb99982d2e49118ebb7b5adf381f9a6b5dfa4080853f2ac64abd545183"
+  },
+  {
+   "ts": "2026-10-14T00:37:06+03:00",
+   "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
+   "label": "Poodle",
+   "side": "buy",
+   "token": {
+    "address": "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f",
+    "symbol": "SPHERE"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x21b8c47ed27e1d339ee95c142040ea5bba677fa2ddd5b2307ac593a2335730a6",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x21b8c47ed27e1d339ee95c142040ea5bba677fa2ddd5b2307ac593a2335730a6"
+  },
+  {
+   "ts": "2026-10-14T01:22:16+03:00",
+   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
+   "label": "Beagle",
+   "side": "buy",
+   "token": {
+    "address": "0xdc960518998bf3b50970f7b89b2353994557371f",
+    "symbol": "GMOTH"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x870fc4f766bbb0019f6ef1d6a24f381bf428ec23876f08023e225cdcf953be78",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x870fc4f766bbb0019f6ef1d6a24f381bf428ec23876f08023e225cdcf953be78"
+  },
+  {
+   "ts": "2026-10-14T03:07:08+03:00",
+   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
+   "label": "Shiba",
+   "side": "buy",
+   "token": {
+    "address": "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7",
+    "symbol": "NIBBLEMOCHI"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xd671a5d99ecd2ac575574b72b62706af50be1f2587b1d5469635ba437072899a",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd671a5d99ecd2ac575574b72b62706af50be1f2587b1d5469635ba437072899a"
+  },
+  {
+   "ts": "2026-10-14T03:07:31+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "buy",
+   "token": {
+    "address": "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7",
+    "symbol": "NIBBLEMOCHI"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xd0577363d048806d99c02a4e31027cdd06147d4efc5530e34d14d6fc78d858d9",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd0577363d048806d99c02a4e31027cdd06147d4efc5530e34d14d6fc78d858d9"
+  },
+  {
+   "ts": "2026-10-14T03:08:22+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "sell",
+   "token": {
+    "address": "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7",
+    "symbol": "NIBBLEMOCHI"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x32524c570730a2cc2fa1377e3eb987a6f1b780e85475776ae02fdce14f3212e4",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x32524c570730a2cc2fa1377e3eb987a6f1b780e85475776ae02fdce14f3212e4"
+  },
+  {
+   "ts": "2026-10-14T03:08:25+03:00",
+   "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
+   "label": "Poodle",
+   "side": "buy",
+   "token": {
+    "address": "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7",
+    "symbol": "NIBBLEMOCHI"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x466300acd22d1c7d0d7027ea1eb1a4e128568b955a23cc62b4669466354e3fa5",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x466300acd22d1c7d0d7027ea1eb1a4e128568b955a23cc62b4669466354e3fa5"
+  },
+  {
+   "ts": "2026-10-14T03:09:15+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "buy",
+   "token": {
+    "address": "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7",
+    "symbol": "NIBBLEMOCHI"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x80388e8cf2b9a27fcaea203cafe9378d5b184dc273ee2cc94f34b81ef965e510",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x80388e8cf2b9a27fcaea203cafe9378d5b184dc273ee2cc94f34b81ef965e510"
+  },
+  {
+   "ts": "2026-10-14T03:09:27+03:00",
+   "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
+   "label": "Poodle",
+   "side": "sell",
+   "token": {
+    "address": "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7",
+    "symbol": "NIBBLEMOCHI"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xfe0eb6ba1bead2cfadb2a9d31f8b68b68cbe9bc57734965ffd83894910aa0e44",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xfe0eb6ba1bead2cfadb2a9d31f8b68b68cbe9bc57734965ffd83894910aa0e44"
+  },
+  {
+   "ts": "2026-10-14T03:10:37+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "buy",
+   "token": {
+    "address": "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7",
+    "symbol": "NIBBLEMOCHI"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xdc135230490534fb4161800254d993a932ceb63de17b5502ca91e3ee5f8ec417",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xdc135230490534fb4161800254d993a932ceb63de17b5502ca91e3ee5f8ec417"
+  },
+  {
+   "ts": "2026-10-14T03:21:07+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "sell",
+   "token": {
+    "address": "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7",
+    "symbol": "NIBBLEMOCHI"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x9c7cb4a62b965c0cf752f27583112b90c1f6afa6b1dc252205710fa655ac3252",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x9c7cb4a62b965c0cf752f27583112b90c1f6afa6b1dc252205710fa655ac3252"
+  },
+  {
+   "ts": "2026-10-14T03:42:59+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "sell",
+   "token": {
+    "address": "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7",
+    "symbol": "NIBBLEMOCHI"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x1841dac395905fb3b572737f41cdba249cd7835cb0214f2cb5391330435cb6db",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x1841dac395905fb3b572737f41cdba249cd7835cb0214f2cb5391330435cb6db"
+  },
+  {
+   "ts": "2026-10-14T03:51:53+03:00",
+   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
+   "label": "Shiba",
+   "side": "sell",
+   "token": {
+    "address": "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7",
+    "symbol": "NIBBLEMOCHI"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xbc59c4b4e48ff4373dd4564c13958c6d9055ed2d7351af6c922b58b2b1460abb",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xbc59c4b4e48ff4373dd4564c13958c6d9055ed2d7351af6c922b58b2b1460abb"
+  },
+  {
+   "ts": "2026-10-14T04:49:59+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "sell",
+   "token": {
+    "address": "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7",
+    "symbol": "NIBBLEMOCHI"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xcdd68bf2bb513f9341b5a4fea62325d4ef2308e974578838c923d0a7e336cae8",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xcdd68bf2bb513f9341b5a4fea62325d4ef2308e974578838c923d0a7e336cae8"
+  },
+  {
+   "ts": "2026-10-14T06:57:52+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "buy",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x8e4e3cd3f4a8ae4f0507e9f3d78759dd160997dbbf57b35a5e891a519682a297",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x8e4e3cd3f4a8ae4f0507e9f3d78759dd160997dbbf57b35a5e891a519682a297"
+  },
+  {
+   "ts": "2026-10-14T07:03:13+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "buy",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x7e1db8abfc13eae6cb947ef4eba3095534b708a18734225c3b5ca58c73537734",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x7e1db8abfc13eae6cb947ef4eba3095534b708a18734225c3b5ca58c73537734"
+  },
+  {
+   "ts": "2026-10-14T07:04:22+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x04dd4d16fb5f4036a67155dff9ffb1b079fee3e79b6a1386c5f112e92f963a35",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x04dd4d16fb5f4036a67155dff9ffb1b079fee3e79b6a1386c5f112e92f963a35"
+  },
+  {
+   "ts": "2026-10-14T07:06:04+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xee86a76d13538cd15c51cb68bf6b6c9dd46bea551cfa2e2b9a5b93088d9d45ee",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xee86a76d13538cd15c51cb68bf6b6c9dd46bea551cfa2e2b9a5b93088d9d45ee"
+  },
+  {
+   "ts": "2026-10-14T07:07:34+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xc91a51458915efbe973a923f6a3c8e3b1a113f8f28c0737d70beef624697ab07",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xc91a51458915efbe973a923f6a3c8e3b1a113f8f28c0737d70beef624697ab07"
+  },
+  {
+   "ts": "2026-10-14T07:08:02+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "buy",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x3e867fea15bd8bea0fcf59b7e643d095f217e722da67fff51ce17d5c2ccb3328",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x3e867fea15bd8bea0fcf59b7e643d095f217e722da67fff51ce17d5c2ccb3328"
+  },
+  {
+   "ts": "2026-10-14T07:08:14+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xd8d029ae9e9193bb029e200a3775e41560e2ba4280802b6b24c4d3d98ba4478e",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd8d029ae9e9193bb029e200a3775e41560e2ba4280802b6b24c4d3d98ba4478e"
+  },
+  {
+   "ts": "2026-10-14T07:13:32+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "buy",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x121a9097f29fe0032b87b67b72328f8e87fb91e4567147e490dd8e6732b6ab04",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x121a9097f29fe0032b87b67b72328f8e87fb91e4567147e490dd8e6732b6ab04"
+  },
+  {
+   "ts": "2026-10-14T07:18:08+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x82ebc33009af05281f3aa86f58dd6a1986d97a8fed90aeab7f9ed0cb00096221",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x82ebc33009af05281f3aa86f58dd6a1986d97a8fed90aeab7f9ed0cb00096221"
+  },
+  {
+   "ts": "2026-10-14T07:24:34+03:00",
+   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
+   "label": "Beagle",
+   "side": "buy",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x56c92b45eb10d858761590e11d2337cc8effbf6910ddc222ecd82a1f7efa7c2f",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x56c92b45eb10d858761590e11d2337cc8effbf6910ddc222ecd82a1f7efa7c2f"
+  },
+  {
+   "ts": "2026-10-14T07:25:31+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x52a58d577ae3cb0611a1598dc97019a35477329a4ae107af4ab76be055bf1201",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x52a58d577ae3cb0611a1598dc97019a35477329a4ae107af4ab76be055bf1201"
+  },
+  {
+   "ts": "2026-10-14T07:25:52+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "buy",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x2231ec3c4e6a6289dc116a80272d4dffb6a310036effb42ca6256bfb7eb73521",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x2231ec3c4e6a6289dc116a80272d4dffb6a310036effb42ca6256bfb7eb73521"
+  },
+  {
+   "ts": "2026-10-14T07:26:47+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x5328cc763e8220cd9570cbab6b6bb167818080545f6f17997988b555d7f7f0af",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x5328cc763e8220cd9570cbab6b6bb167818080545f6f17997988b555d7f7f0af"
+  },
+  {
+   "ts": "2026-10-14T07:27:01+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "buy",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x3ed62feef3c268776b8f803fe56cf7d93e4456861fed580a05eaa1b95cb42d63",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x3ed62feef3c268776b8f803fe56cf7d93e4456861fed580a05eaa1b95cb42d63"
+  },
+  {
+   "ts": "2026-10-14T07:28:17+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xc9bcbf4528886ad4af56f887df00bd529b3aac1c619fea51740387f488202a2c",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xc9bcbf4528886ad4af56f887df00bd529b3aac1c619fea51740387f488202a2c"
+  },
+  {
+   "ts": "2026-10-14T07:28:56+03:00",
+   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
+   "label": "Beagle",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x983cf7ceffb93ec139ccb5e168678400f01d0808031082d4ebf7915f341e95bc",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x983cf7ceffb93ec139ccb5e168678400f01d0808031082d4ebf7915f341e95bc"
+  },
+  {
+   "ts": "2026-10-14T07:29:25+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xfb2c480c83f66f9b99cbb3b83ac75db8f18112232bd9aa3b80bccebdb6c2998f",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xfb2c480c83f66f9b99cbb3b83ac75db8f18112232bd9aa3b80bccebdb6c2998f"
+  },
+  {
+   "ts": "2026-10-14T07:36:17+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xe91741322f2cfb7eca71c26cfdbcd8551f8c2552ab672ac6d52988db78036219",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xe91741322f2cfb7eca71c26cfdbcd8551f8c2552ab672ac6d52988db78036219"
+  },
+  {
+   "ts": "2026-10-14T07:37:57+03:00",
+   "wallet": "0x305cce99734d69a5ae927695b18c350763629930",
+   "label": "Beagle",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x9d93da9e4a5b4d84b2844367b3f4d5296499d1164cd93bd19546a6a7f35e5ccb",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x9d93da9e4a5b4d84b2844367b3f4d5296499d1164cd93bd19546a6a7f35e5ccb"
+  },
+  {
+   "ts": "2026-10-14T08:08:02+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "sell",
+   "token": {
+    "address": "0x8a5193cc022f17db37a4587d9084eb33d8a40cef",
+    "symbol": "DKIT"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x0923a9867ac460f6985646c150d8d23b05cc1c00d8798d2ef20b2eda06c07e4b",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x0923a9867ac460f6985646c150d8d23b05cc1c00d8798d2ef20b2eda06c07e4b"
+  },
+  {
+   "ts": "2026-10-14T08:20:27+03:00",
+   "wallet": "0xef0bb67423b1c370e2477d535dc28ba728a73c04",
+   "label": "Dachshund",
+   "side": "buy",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xc8bcb98099a566dec7082c7df12da0fa9916de4a890f4c717562b16709babb03",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xc8bcb98099a566dec7082c7df12da0fa9916de4a890f4c717562b16709babb03"
+  },
+  {
+   "ts": "2026-10-14T08:23:28+03:00",
+   "wallet": "0xef0bb67423b1c370e2477d535dc28ba728a73c04",
+   "label": "Dachshund",
+   "side": "sell",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xfeb63b6eec76aae9808c425a5161327db33fcc48fd479f16d20ed3f875e67841",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xfeb63b6eec76aae9808c425a5161327db33fcc48fd479f16d20ed3f875e67841"
+  },
+  {
+   "ts": "2026-10-14T08:23:29+03:00",
+   "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
+   "label": "Poodle",
+   "side": "buy",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x752734f1f63f8a9d0f88c404d8508e6433eed4ee279a2118de7ad9cd1f9e6907",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x752734f1f63f8a9d0f88c404d8508e6433eed4ee279a2118de7ad9cd1f9e6907"
+  },
+  {
+   "ts": "2026-10-14T08:24:11+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "buy",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x6dc02e29851d5aba3ca5e930b7f062f970d5d9baacbef64d315f7f05c516d028",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x6dc02e29851d5aba3ca5e930b7f062f970d5d9baacbef64d315f7f05c516d028"
+  },
+  {
+   "ts": "2026-10-14T08:24:23+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "sell",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x56efdc12ce84a8fd0af7d4d1367c8f374b48fe55da10efb86d48a165c6a821d7",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x56efdc12ce84a8fd0af7d4d1367c8f374b48fe55da10efb86d48a165c6a821d7"
+  },
+  {
+   "ts": "2026-10-14T08:24:44+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "buy",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x7838a647a932607ec9075b2c87e026b4b877987a1bec719c5bd7483d9b440591",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x7838a647a932607ec9075b2c87e026b4b877987a1bec719c5bd7483d9b440591"
+  },
+  {
+   "ts": "2026-10-14T08:26:30+03:00",
+   "wallet": "0xef0bb67423b1c370e2477d535dc28ba728a73c04",
+   "label": "Dachshund",
+   "side": "sell",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xdab92d2c3fb300ef810f213abc8e4cd4b90666bd9518b7914d328b4a6e987d0d",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xdab92d2c3fb300ef810f213abc8e4cd4b90666bd9518b7914d328b4a6e987d0d"
+  },
+  {
+   "ts": "2026-10-14T08:28:09+03:00",
+   "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
+   "label": "Poodle",
+   "side": "buy",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xce7e2c050039afd2d61fcb42c6ed6285dfde2d60d30ae02fd79d057d0ba3822c",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xce7e2c050039afd2d61fcb42c6ed6285dfde2d60d30ae02fd79d057d0ba3822c"
+  },
+  {
+   "ts": "2026-10-14T08:28:20+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "buy",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x14abb0bf1041361f0503732baf6e2db81c49c9216f49489495e1b0fec6e9e6fd",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x14abb0bf1041361f0503732baf6e2db81c49c9216f49489495e1b0fec6e9e6fd"
+  },
+  {
+   "ts": "2026-10-14T08:29:10+03:00",
+   "wallet": "0xef0bb67423b1c370e2477d535dc28ba728a73c04",
+   "label": "Dachshund",
+   "side": "sell",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x10f3c91d94465c45c568b40fa9b3a3efcfd94165ee930b78b08feb6af1c7a815",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x10f3c91d94465c45c568b40fa9b3a3efcfd94165ee930b78b08feb6af1c7a815"
+  },
+  {
+   "ts": "2026-10-14T08:31:21+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "sell",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xffbeeefc9cb9f370a54d122817013afa51ca3b89a84327b34f2dfa7c26850cab",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xffbeeefc9cb9f370a54d122817013afa51ca3b89a84327b34f2dfa7c26850cab"
+  },
+  {
+   "ts": "2026-10-14T08:32:26+03:00",
+   "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
+   "label": "Poodle",
+   "side": "buy",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xd2669c1212d5b5afff5a6fe3d05d1d6d433b2d68b812864ac37a65515aed327b",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd2669c1212d5b5afff5a6fe3d05d1d6d433b2d68b812864ac37a65515aed327b"
+  },
+  {
+   "ts": "2026-10-14T08:33:17+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "buy",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x85189b23a10c0d52947070a2919358e629701a124c3bbb1b50bc4034efc81c98",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x85189b23a10c0d52947070a2919358e629701a124c3bbb1b50bc4034efc81c98"
+  },
+  {
+   "ts": "2026-10-14T08:34:52+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "sell",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xe12775ece7e6e97bf22d72c5615cb022b76dd2baf03b385ba1b44dd91ee5227f",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xe12775ece7e6e97bf22d72c5615cb022b76dd2baf03b385ba1b44dd91ee5227f"
+  },
+  {
+   "ts": "2026-10-14T08:35:11+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "sell",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x540159e29f2220fbfa90111836d32503629778887e0267e38c9fab41f03e357a",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x540159e29f2220fbfa90111836d32503629778887e0267e38c9fab41f03e357a"
+  },
+  {
+   "ts": "2026-10-14T08:36:25+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "sell",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xccba3c60fefaaf0eb7818f076c434d8258ae3f131097ce0e2972763d7b95b577",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xccba3c60fefaaf0eb7818f076c434d8258ae3f131097ce0e2972763d7b95b577"
+  },
+  {
+   "ts": "2026-10-14T08:36:50+03:00",
+   "wallet": "0x603415a341b8957a235fc624af3cfbd28327a320",
+   "label": "Poodle",
+   "side": "sell",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xd8bbb840d67b279513009deaae277c13e746db9b4edfa13c4018c406bcd80a2e",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xd8bbb840d67b279513009deaae277c13e746db9b4edfa13c4018c406bcd80a2e"
+  },
+  {
+   "ts": "2026-10-14T08:36:51+03:00",
+   "wallet": "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a",
+   "label": "Whippet",
+   "side": "sell",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0x64d7dedca38a37b4bb9dbe2da33bbacd5517fc04de0a5639845722fe0a150cdb",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x64d7dedca38a37b4bb9dbe2da33bbacd5517fc04de0a5639845722fe0a150cdb"
+  },
+  {
+   "ts": "2026-10-14T08:58:15+03:00",
+   "wallet": "0xa1de8cc8ea0366aee682b969f62b814fb446598a",
+   "label": "Husky",
+   "side": "buy",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0xc478950572d960bb27f03d32b75f4c1bae87642febbb8f4d6cad36ec8e00669f",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xc478950572d960bb27f03d32b75f4c1bae87642febbb8f4d6cad36ec8e00669f"
+  },
+  {
+   "ts": "2026-10-14T09:02:52+03:00",
+   "wallet": "0x5e9c8a78a4fc264fb4e6a8f3277d246d3dcf2738",
+   "label": "Shiba",
+   "side": "buy",
+   "token": {
+    "address": "0xde194bd5c9edf4ded7d0317419ba7d726af75ee5",
+    "symbol": "WBROO"
+   },
+   "reason": "not enough paper cash",
+   "tx_hash": "0x4064a9c4be07696f269e667b5e99d812cc18caffe1a7ffc4fc95d7ccd2440294",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0x4064a9c4be07696f269e667b5e99d812cc18caffe1a7ffc4fc95d7ccd2440294"
+  },
+  {
+   "ts": "2026-10-14T09:11:12+03:00",
+   "wallet": "0xe2ea9afdf1dbe563311303c605edca754d03a62c",
+   "label": "Collie",
+   "side": "sell",
+   "token": {
+    "address": "0x57232eb442541a1d95936f4c157288bbc000dd83",
+    "symbol": "VRAC"
+   },
+   "reason": "sell of a position we never copied (bought before the start or skipped)",
+   "tx_hash": "0xc002e90eb44f16ed233596165b9d815fbad44f6b08c1b4db389bc1136a6b3c2b",
+   "tx_url": "https://robinhoodchain.blockscout.com/tx/0xc002e90eb44f16ed233596165b9d815fbad44f6b08c1b4db389bc1136a6b3c2b"
   }
  ],
  "positions": [
@@ -6798,7 +6798,7 @@
    "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0x429307311111b21bb65a547ed58d6870d911cff5e38226d8922b98bd05bdfabd",
    "avg_price_usd": 9.735552951812454e-07,
    "last_price_usd": 2.56985618470461e-07,
-   "last_price_at": "2026-10-13T21:26:02+03:00",
+   "last_price_at": "2026-10-14T09:16:43+03:00",
    "price_stale": false,
    "value_usd": 17.04,
    "unrealized_pnl_usd": -47.5136
@@ -6819,7 +6819,7 @@
    "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0xf892dee4235c373c9666cfccc0c1c5c4582ee77d3ddbc6d2c5e1210049251f62",
    "avg_price_usd": 1.550495893551476e-05,
    "last_price_usd": 9.44108854498127e-06,
-   "last_price_at": "2026-10-13T21:26:02+03:00",
+   "last_price_at": "2026-10-14T09:16:43+03:00",
    "price_stale": false,
    "value_usd": 16.9753,
    "unrealized_pnl_usd": -10.9029
@@ -6840,7 +6840,7 @@
    "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0x69583d51d28c82a79c22b9e10cc35fa190906b58f2ca35dcaeb3e06d982df984",
    "avg_price_usd": 1.6157062930326936e-05,
    "last_price_usd": 9.44108854498127e-06,
-   "last_price_at": "2026-10-13T21:26:02+03:00",
+   "last_price_at": "2026-10-14T09:16:43+03:00",
    "price_stale": false,
    "value_usd": 9.9823,
    "unrealized_pnl_usd": -7.1009
@@ -6861,7 +6861,7 @@
    "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0xd40e59b786142659dd656491ee70149ce333b9e2fe8c507acbee7dfcdcd3fa1d",
    "avg_price_usd": 5.578491823101838e-06,
    "last_price_usd": 9.44108854498127e-06,
-   "last_price_at": "2026-10-13T21:26:02+03:00",
+   "last_price_at": "2026-10-14T09:16:43+03:00",
    "price_stale": false,
    "value_usd": 5.5312,
    "unrealized_pnl_usd": 2.2629
@@ -6882,7 +6882,7 @@
    "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0x03c22c567705d90f6b68a7fdf04aecf7dc082cd2184152310b411584990a7c10",
    "avg_price_usd": 5.27550703193863e-05,
    "last_price_usd": 9.44108854498127e-06,
-   "last_price_at": "2026-10-13T21:26:02+03:00",
+   "last_price_at": "2026-10-14T09:16:43+03:00",
    "price_stale": false,
    "value_usd": 2.2808,
    "unrealized_pnl_usd": -10.4637
@@ -6903,7 +6903,7 @@
    "open_tx_url": "https://robinhoodchain.blockscout.com/tx/0xe53395d3908351ddd6f13255df343cc8fa2c1d782dd6cb15f32cb87a0031d2ce",
    "avg_price_usd": 1.2892767750639335e-05,
    "last_price_usd": 9.44108854498127e-06,
-   "last_price_at": "2026-10-13T21:26:02+03:00",
+   "last_price_at": "2026-10-14T09:16:43+03:00",
    "price_stale": false,
    "value_usd": 0.0465,
    "unrealized_pnl_usd": -0.0169
@@ -6920,7 +6920,11 @@
    "0x0060916bb3b7f822f3a2294fe76b4f4f4e7d951e": 24806676.025357,
    "0x47a26637a7b08297a0539dce4f3fa700710aec12": 6239771.21919721,
    "0xf43915600c989487295645b1097eb20a2ce95000": 155441570.37790933,
-   "0x961d4e859a846fe2375690f0ba9a18028979c8e7": 1119004188.594923
+   "0x961d4e859a846fe2375690f0ba9a18028979c8e7": 1119004188.594923,
+   "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f": 51973350000.0,
+   "0xdc960518998bf3b50970f7b89b2353994557371f": 26259570.96456593,
+   "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7": 133750621.54974705,
+   "0xde194bd5c9edf4ded7d0317419ba7d726af75ee5": 74227435.51521339
   },
   "0x305cce99734d69a5ae927695b18c350763629930": {
    "0x7c698f001c33885eb29bb58ac40343c440e1bcc4": 44878790.04340851,
@@ -6935,7 +6939,9 @@
    "0xf43915600c989487295645b1097eb20a2ce95000": 98825565.6533871,
    "0x961d4e859a846fe2375690f0ba9a18028979c8e7": 210113837.52136752,
    "0x4ca5fefd12f67d007da9e7aa58c995fad46f89d2": 1261232.1980064856,
-   "0xdc960518998bf3b50970f7b89b2353994557371f": 1551858815.2586613
+   "0xdc960518998bf3b50970f7b89b2353994557371f": 1592445336.3753119,
+   "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f": 49423350000.0,
+   "0x8a5193cc022f17db37a4587d9084eb33d8a40cef": 393490934.92843
   },
   "0xe2ea9afdf1dbe563311303c605edca754d03a62c": {
    "0x7c698f001c33885eb29bb58ac40343c440e1bcc4": 44250913.26724272,
@@ -6947,7 +6953,11 @@
    "0x0060916bb3b7f822f3a2294fe76b4f4f4e7d951e": 774327397.9320526,
    "0x47a26637a7b08297a0539dce4f3fa700710aec12": 443499259.6176838,
    "0x4ca5fefd12f67d007da9e7aa58c995fad46f89d2": 715240.7793485536,
-   "0xf43915600c989487295645b1097eb20a2ce95000": 64398057.46225379
+   "0xf43915600c989487295645b1097eb20a2ce95000": 64398057.46225379,
+   "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f": 49423350000.0,
+   "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7": 7126729.29668408,
+   "0x8a5193cc022f17db37a4587d9084eb33d8a40cef": 792165706.987774,
+   "0x57232eb442541a1d95936f4c157288bbc000dd83": 7655224.942125147
   },
   "0x67d3c7c0f020c188ac8a4f2f30a107bd5978497a": {
    "0x5ebda74759d564d707221c2b1cd62a14fbe3970a": 0.0,
@@ -6960,7 +6970,11 @@
    "0x0060916bb3b7f822f3a2294fe76b4f4f4e7d951e": 111883441.06516616,
    "0x47a26637a7b08297a0539dce4f3fa700710aec12": 214516221.61876616,
    "0xf43915600c989487295645b1097eb20a2ce95000": 331520762.09606516,
-   "0x4ca5fefd12f67d007da9e7aa58c995fad46f89d2": 127805.63789170355
+   "0x4ca5fefd12f67d007da9e7aa58c995fad46f89d2": 127805.63789170355,
+   "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f": 49423350000.0,
+   "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7": 178995095.4511949,
+   "0x8a5193cc022f17db37a4587d9084eb33d8a40cef": 637878338.4168864,
+   "0x57232eb442541a1d95936f4c157288bbc000dd83": 6037012.39448497
   },
   "0xa1de8cc8ea0366aee682b969f62b814fb446598a": {
    "0x7c698f001c33885eb29bb58ac40343c440e1bcc4": 132749001.77578992,
@@ -6974,7 +6988,11 @@
    "0x47a26637a7b08297a0539dce4f3fa700710aec12": 129812387.53693251,
    "0x4ca5fefd12f67d007da9e7aa58c995fad46f89d2": 1114347.931005355,
    "0xf43915600c989487295645b1097eb20a2ce95000": 242434608.44821173,
-   "0xdc960518998bf3b50970f7b89b2353994557371f": 68344938.05078119
+   "0xdc960518998bf3b50970f7b89b2353994557371f": 156224128.53095534,
+   "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f": 49423350000.0,
+   "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7": 78364019.28484833,
+   "0x8a5193cc022f17db37a4587d9084eb33d8a40cef": 810587667.3543065,
+   "0x57232eb442541a1d95936f4c157288bbc000dd83": 137239.0514521047
   },
   "0xef0bb67423b1c370e2477d535dc28ba728a73c04": {
    "0x7c698f001c33885eb29bb58ac40343c440e1bcc4": 6443633.326625643,
@@ -6988,7 +7006,8 @@
    "0x0060916bb3b7f822f3a2294fe76b4f4f4e7d951e": 61160682.96075177,
    "0x47a26637a7b08297a0539dce4f3fa700710aec12": 8710708.511021052,
    "0x4ca5fefd12f67d007da9e7aa58c995fad46f89d2": 846694.2220835019,
-   "0xf43915600c989487295645b1097eb20a2ce95000": 342458681.654177
+   "0xf43915600c989487295645b1097eb20a2ce95000": 342458681.654177,
+   "0x57232eb442541a1d95936f4c157288bbc000dd83": 2472913.1411696277
   },
   "0x603415a341b8957a235fc624af3cfbd28327a320": {
    "0x7c698f001c33885eb29bb58ac40343c440e1bcc4": 1431334.1056163248,
@@ -6999,7 +7018,10 @@
    "0x949cd192c78df210b5840843e60c06a95b055a46": 442954016.5673116,
    "0x0060916bb3b7f822f3a2294fe76b4f4f4e7d951e": 214230429.86189675,
    "0x47a26637a7b08297a0539dce4f3fa700710aec12": 826459004.1460401,
-   "0x4ca5fefd12f67d007da9e7aa58c995fad46f89d2": 15375750.440982927
+   "0x4ca5fefd12f67d007da9e7aa58c995fad46f89d2": 15375750.440982927,
+   "0xbf47a196ee78612169edd4ce0cf2e128f6c8920f": 47000000000.0,
+   "0x2f8a8d8cda53cf078a39769a19294b4e4e57a7a7": 122077822.94214128,
+   "0x57232eb442541a1d95936f4c157288bbc000dd83": 2797363.122179061
   },
   "0xf38ec57459ed2969932c6e61dc6e67a644008f7d": {
    "0x3646a8b3bc0f6d5b62c018cb91c5da341003aadd": 612433227.4242886,
@@ -7429,6 +7451,13 @@
   },
   {
    "ts": "2026-10-13T21:26:02+03:00",
+   "equity": 52.3472,
+   "cash": 0.4911,
+   "positions_value": 51.8561,
+   "event": "mark"
+  },
+  {
+   "ts": "2026-10-14T09:16:43+03:00",
    "equity": 52.3472,
    "cash": 0.4911,
    "positions_value": 51.8561,
@@ -7923,6 +7952,42 @@
     "geckoterminal": {
      "ok": true,
      "calls": 4,
+     "failed_calls": 0,
+     "errors": []
+    }
+   }
+  },
+  {
+   "at": "2026-10-14T09:16:43+03:00",
+   "kind": "run",
+   "new_swaps": 76,
+   "copied": 0,
+   "skipped": 74,
+   "wallets_failed": [
+    "Basenji: Blockscout history incomplete this run (0 transfers read)"
+   ],
+   "notes": [
+    "0xfad4eba1: too fresh, left for the next run",
+    "0xa2c46487: too fresh, left for the next run"
+   ],
+   "sources": {
+    "blockscout": {
+     "ok": false,
+     "calls": 8,
+     "failed_calls": 1,
+     "errors": [
+      "HTTP Error 500: Internal Server Error @ blockscout.com/api/v2/addresses/0xf38ec57459ed2969932c6e61dc6e67a644008f7d/token-transfers"
+     ]
+    },
+    "dexscreener": {
+     "ok": true,
+     "calls": 1,
+     "failed_calls": 0,
+     "errors": []
+    },
+    "geckoterminal": {
+     "ok": true,
+     "calls": 7,
      "failed_calls": 0,
      "errors": []
     }
